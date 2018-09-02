@@ -12,9 +12,50 @@
 </head>
 <body>
 
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed navigation">
+        <a class="navbar-brand mr-5" href="#">
+            <img src="images/fnr_logo.svg">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto text-uppercase  ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">главная</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">о фонде</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#projects">проекты</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#partners">партнёры</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#management">руководство</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#news">новости</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contacts">контакты</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">документы</a>
+            </li>
+            </ul>
+        </div>
+        </nav>
+
+
     <!-- O FONDE -->
 
-    <div class="row text-center pt-5 pb-5 o-fonde">
+    <div class="row text-center pt-7-rem o-fonde" id="about">
         <div class="col-12">
             <h5 class="text-uppercase main-title mb-0">о фонде</h5>
             <div class="small-line mx-auto"></div>
@@ -28,15 +69,18 @@
         </div>
     </div>
 
-    <div class="row text-center pt-5 pb-5 projects">
-        <div class="projects"></div>
+    <!-- PROJECTS -->
+
+    <div class="row text-center pt-7-rem projects" id="projects">
         <div class="col-12">
             <h5 class="text-uppercase main-title mb-0">проекты фонда</h5>
 
         </div>
     </div>
 
-    <div class="row text-center pt-5 pb-5 partners">
+    <!-- PARTNERS -->
+
+    <div class="row text-center pt-7-rem partners" id="partners">
         <div class="col-12">
             <h5 class="text-uppercase main-title mb-0">наши партнеры</h5>
             <div class="small-line mx-auto"></div>
@@ -93,7 +137,7 @@
 
     <!-- BANNER RASTORGUEV -->
 
-    <div class="row align-items-center">
+    <div class="row align-items-center pt-4i8-rem" id="management">
         <div class="col-12 rastorguev">
             <div class="row pt-5 pb-5 align-items-center h-100">
                 <div class="col-md-6 col-12 offset-0 offset-md-6">
@@ -110,7 +154,7 @@
 
     <!-- MANAGEMENT -->
 
-    <div class="row text-center pt-5 pb-5 management">
+    <div class="row text-center pt-7-rem management">
         <div class="col-12">
             <h5 class="text-uppercase main-title mb-5">руководство фонда</h5>
             <div class="row mt-5">
@@ -141,7 +185,7 @@
 
     <!-- NOVOSTI -->
 
-    <div class="row text-center pt-5 pb-5 o-fonde">
+    <div class="row text-center pt-7-rem pb-5 news" id="news">
         <div class="col-12">
             <h5 class="text-uppercase main-title mb-0">новости фонда / пресс-служба</h5>
             <div class="small-line mx-auto"></div>
@@ -153,8 +197,8 @@
 
     <!-- KONTAKTI -->
 
-    <div class="row text-center pt-5 pb-5 contacts">
-        <div class="col-12 mb-5">
+    <div class="row text-center pt-7-rem pb-5 contacts" id="contacts">
+        <div class="col-12 mb-5 mt-4">
             <h5 class="text-uppercase main-title mb-0">контакты</h5>
             <div class="small-line mx-auto"></div>
             <p class="w-75 mx-auto">
@@ -202,11 +246,19 @@
                     <input type="email" class="form-control" placeholder="Ваш Email">
                     </div>
                 </div>
-                <div class="form-row">
+                <div class="form-row mb-4">
                     <div class="col-12">
                         <textarea class="form-control" placeholder="Ваше сообщение" rows="3" class="w-100"></textarea>
                     </div>
                 </div>
+
+                <div class="form-row">
+                    <div class="col-3 text-left">
+                        <button class="btn btn-primary" type="submit">Отправить</button>
+                    </div>
+                </div>
+
+                
                         
                 
                 </form>
@@ -234,5 +286,9 @@
         </div>
     </div>
 
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -6786,6 +6786,13 @@ a.text-dark:hover, a.text-dark:focus {
 .white-title {
   color: white; }
 
+.pt-4i8-rem {
+  padding-top: 4.8rem !important; }
+
+.pt-7-rem {
+  padding-top: 7rem !important;
+  padding-bottom: 7rem !important; }
+
 .small-line {
   z-index: 423;
   width: 22px;
@@ -6796,7 +6803,34 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 30px;
   position: relative; }
 
+.navigation {
+  margin-top: -66px;
+  width: 100%;
+  z-index: 474;
+  border-style: solid;
+  border-color: #B9B9B9;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  position: fixed;
+  border-width: 0px 0px 1px;
+  background: #FFFFFF url(../images/geometric-bg-1.svg) no-repeat center center;
+  background-size: cover; }
+  .navigation img {
+    width: 100px; }
+  .navigation .navbar-toggler {
+    border-color: transparent; }
+  .navigation .active .nav-link {
+    color: #3D89CD !important; }
+  .navigation a.nav-link {
+    color: black !important;
+    font-size: 0.8rem; }
+    .navigation a.nav-link:hover, .navigation a.nav-link:focus {
+      color: #3D89CD !important; }
+
 .o-fonde {
+  margin-top: 66px;
+  padding-top: 66px;
   z-index: 32;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
   border-color: #000000;
@@ -6940,13 +6974,13 @@ a.text-dark:hover, a.text-dark:focus {
     height: 50px; }
   .contacts form textarea {
     height: 200px; }
-  .contacts form input, .contacts form textarea {
+  .contacts form input, .contacts form textarea, .contacts form button {
     background: transparent;
     border-width: 2px;
     border-color: white;
     border-radius: 0%;
     color: white; }
-    .contacts form input.form-control:focus, .contacts form textarea.form-control:focus {
+    .contacts form input.form-control:focus, .contacts form textarea.form-control:focus, .contacts form button.form-control:focus {
       color: white;
       background-color: transparent;
       border-color: white;
@@ -6961,6 +6995,14 @@ a.text-dark:hover, a.text-dark:focus {
     background: transparent;
     font-family: open-sans, sans-serif;
     font-weight: 300; }
+  .contacts form button {
+    width: 195px;
+    height: 60px;
+    font-family: open-sans, sans-serif;
+    font-weight: 300; }
+    .contacts form button:hover {
+      border-color: #4F9DD4;
+      background-color: #4F9DD4; }
 
 .footer {
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
