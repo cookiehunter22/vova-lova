@@ -1,0 +1,18 @@
+@mixin partner($src) {
+    width: 152px;
+    height: 37px;
+    display: block;
+    // background: transparent url($src) no-repeat center center;
+}
+@mixin form-icon($src) {
+    z-index: 102;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-left: auto;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    background: transparent url($src) no-repeat 0% 0%;
+    background-size: cover;
+}
