@@ -177,6 +177,46 @@ $font-family-sans-serif: montserrat, sans-serif;
     .mail {
         @include form-icon("../images/icon__mail.svg")
     }
+    form {
+        input {
+            height: 50px;
+        }
+        textarea {
+            height: 200px;
+        }
+        input, textarea {
+            background: transparent;
+            border-width: 2px;
+            border-color: white;
+            border-radius: 0%;
+            color: white;
+
+            &.form-control:focus {
+                color: white;
+                background-color: transparent;
+                border-color: white;
+                box-shadow: none;
+            }
+
+            
+        }
+
+        input::placeholder { 
+            color: white; 
+            background: transparent;
+            font-family: open-sans, sans-serif;
+            font-weight: 300;
+        }
+
+        textarea::placeholder { 
+            color: white; 
+            background: transparent;
+            font-family: open-sans, sans-serif;
+            font-weight: 300;
+        }
+
+        
+    }
 }
 
 .footer {
