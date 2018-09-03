@@ -6856,6 +6856,15 @@ a.text-dark:hover, a.text-dark:focus {
 .video video {
   max-width: 100%;
   height: auto; }
+  @media (max-width: 991.98px) {
+    .video video {
+      display: none; } }
+.video img {
+  width: 100%;
+  display: none; }
+  @media (max-width: 991.98px) {
+    .video img {
+      display: block; } }
 .video .video-cover {
   background: url(../images/pattern.png) repeat left top;
   position: absolute;
@@ -6871,6 +6880,12 @@ a.text-dark:hover, a.text-dark:focus {
   width: 100%;
   border-top: solid 2px white;
   padding-top: 40px; }
+  @media (max-width: 991.98px) {
+    .video .on-screen-text h3 {
+      font-size: 1.4rem; } }
+  @media (max-width: 767.98px) {
+    .video .on-screen-text h3 {
+      font-size: 0.8rem; } }
   .video .on-screen-text a {
     color: white;
     text-decoration: none; }

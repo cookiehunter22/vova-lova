@@ -103,6 +103,17 @@ $link-blue: #3D89CD;
     video {
         max-width: 100%;
         height: auto;
+        @include media-breakpoint-down(md){
+            display: none;
+        }
+    }
+
+    img {
+        width: 100%;
+        display: none;
+        @include media-breakpoint-down(md){
+            display: block;
+        }
     }
 
     .video-cover {
@@ -123,6 +134,15 @@ $link-blue: #3D89CD;
         width: 100%;
         border-top: solid 2px white;
         padding-top: 40px;
+
+        h3 {
+            @include media-breakpoint-down(md){
+                font-size: 1.4rem;
+            }
+            @include media-breakpoint-down(sm){
+                font-size: 0.8rem;
+            }
+        }
 
         a {
             color: white;
