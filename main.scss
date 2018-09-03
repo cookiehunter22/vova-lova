@@ -11,6 +11,7 @@ $link-blue: #3D89CD;
 @import "node_modules/bootstrap/scss/bootstrap";
 .row {
     margin-right: 0 !important;
+    margin-left: 0 !important;
 }
 .main-title {
     color: $main-title;
@@ -40,18 +41,19 @@ $link-blue: #3D89CD;
 }
 
 .navigation {
-    margin-top: -$nav-height;
+    // margin-top: -$nav-height;
     width: 100%;
     z-index: 474;
     border-style: solid;
     border-color: #B9B9B9;
-    opacity: 1;
+    opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     position: fixed;
     border-width: 0px 0px 1px;
     background: #FFFFFF url(../images/geometric-bg-1.svg) no-repeat center center;
     background-size: cover;
+    // transition: all .3s linear 0s;
     img {
         width: 100px;
     }
@@ -70,10 +72,42 @@ $link-blue: #3D89CD;
             color: $link-blue !important;
         }
     }
+    &.down {
+        // @include fade-in-animation(fade-in);
+        opacity: 1;
+    }
+    
+    &.top {
+        @include fade-in-animation(fade-in);
+        // opacity: 1;
+
+        position: relative !important;
+        margin-bottom: -$nav-height;
+        background: transparent;
+        background-color: transparent !important;
+        border-style: none;
+        a.nav-link {
+            color:white !important;
+            &:hover, &:focus {
+                color: $link-blue !important;
+            }
+        }
+        @include media-breakpoint-down(md){
+            visibility: hidden;
+        }
+
+    }
+}
+
+.video {
+    video {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 .o-fonde {
-    margin-top: $nav-height;
+    margin-top: -10px;
     padding-top: $nav-height;
     z-index: 32;
     box-shadow: 1px 1px 20px rgba(0,0,0,0.25);
@@ -186,9 +220,9 @@ $link-blue: #3D89CD;
             font-size: 0.7rem;
         }
 
-        @include media-breakpoint-down(sm) { 
-            width: 50%;
-         }
+        // @include media-breakpoint-down(sm) { 
+        //     width: 50%;
+        //  }
 
     }
 }
@@ -204,7 +238,7 @@ $link-blue: #3D89CD;
     position: relative;
 
     .carousel-container {
-        padding: 0 100px 0 100px;
+        padding: 0 10% 0 10% !important;
         .slick-prev:before, .slick-next:before {
             color: $link-blue;
         }

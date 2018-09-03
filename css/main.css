@@ -6781,7 +6781,8 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 .row {
-  margin-right: 0 !important; }
+  margin-right: 0 !important;
+  margin-left: 0 !important; }
 
 .main-title {
   color: #282828; }
@@ -6807,12 +6808,11 @@ a.text-dark:hover, a.text-dark:focus {
   position: relative; }
 
 .navigation {
-  margin-top: -66px;
   width: 100%;
   z-index: 474;
   border-style: solid;
   border-color: #B9B9B9;
-  opacity: 1;
+  opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   position: fixed;
@@ -6830,9 +6830,35 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 0.8rem; }
     .navigation a.nav-link:hover, .navigation a.nav-link:focus {
       color: #3D89CD !important; }
+  .navigation.down {
+    opacity: 1; }
+  .navigation.top {
+    animation-name: fade-in;
+    animation-duration: 2s;
+    position: relative !important;
+    margin-bottom: -66px;
+    background: transparent;
+    background-color: transparent !important;
+    border-style: none; }
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+    .navigation.top a.nav-link {
+      color: white !important; }
+      .navigation.top a.nav-link:hover, .navigation.top a.nav-link:focus {
+        color: #3D89CD !important; }
+    @media (max-width: 991.98px) {
+      .navigation.top {
+        visibility: hidden; } }
+
+.video video {
+  max-width: 100%;
+  height: auto; }
 
 .o-fonde {
-  margin-top: 66px;
+  margin-top: -10px;
   padding-top: 66px;
   z-index: 32;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.25);
@@ -6921,9 +6947,6 @@ a.text-dark:hover, a.text-dark:focus {
       max-width: 100%; }
     .management .management_card p {
       font-size: 0.7rem; }
-    @media (max-width: 767.98px) {
-      .management .management_card {
-        width: 50%; } }
 
 .news {
   z-index: 34;
@@ -6936,7 +6959,7 @@ a.text-dark:hover, a.text-dark:focus {
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.25);
   position: relative; }
   .news .carousel-container {
-    padding: 0 100px 0 100px; }
+    padding: 0 10% 0 10% !important; }
     .news .carousel-container .slick-prev:before, .news .carousel-container .slick-next:before {
       color: #3D89CD; }
     .news .carousel-container .news-box {
