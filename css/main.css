@@ -6851,7 +6851,7 @@ a.text-dark:hover, a.text-dark:focus {
         color: #3D89CD !important; }
     @media (max-width: 991.98px) {
       .navigation.top {
-        visibility: hidden; } }
+        display: none; } }
 
 .video video {
   max-width: 100%;

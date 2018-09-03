@@ -34,6 +34,10 @@ $('.year-controls').click(function(){
     
 });
 
+$('.nav-link').click(function(){
+    $('.navbar-collapse').collapse('hide');
+})
+
 let lastScrollTop = 0;
 
 $(window).scroll(setNavClass);

@@ -93,7 +93,7 @@ $link-blue: #3D89CD;
             }
         }
         @include media-breakpoint-down(md){
-            visibility: hidden;
+            display: none;
         }
 
     }
