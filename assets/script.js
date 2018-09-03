@@ -18,6 +18,22 @@ function setNavClass(){
 
     lastScrollTop = st;
 }
+
+$('.year-controls').click(function(){
+    $('.year-controls').removeClass('active');
+    $(this).addClass('active');
+    const filterYear = $(this).data('filter');
+    $('.projects-carousel').slick('slickUnfilter');
+    if (filterYear == 'all') {
+        return;
+    }
+
+    $('.projects-carousel').slick('slickFilter', function(){
+        return $(this).data('year') == filterYear;
+    });
+    
+});
+
 let lastScrollTop = 0;
 
 $(window).scroll(setNavClass);
