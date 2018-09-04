@@ -1,0 +1,24 @@
+<div class="col-12 carousel-container">
+    {{# if news}}
+    <div class="news-carousel">
+        {{# each news}}
+        <div class="news-box">
+            <div class="img-container" style="background: url({{{image.secure_url}}}) no-repeat center center; background-size: cover;"></div>
+            <a class="text-uppercase text-center">{{{title}}}</a>
+            <p class="description">{{{content.description}}}</p>
+            <div class="row text-center mb-2">
+                <div class="col-6">
+                    <i class="far fa-calendar-alt"></i>
+                    <p class="date">{{{date date format='MMMM YYYY'}}}</p>
+                </div>
+                <div class="col-6">
+                    <i class="fas fa-tag"></i>
+                    <p class="tag">{{{tag}}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+
+</div>

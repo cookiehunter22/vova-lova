@@ -1,35 +1,73 @@
 @mixin partner($src) {
-    width: 152px;
-    height: 37px;
-    display: block;
-    // background: transparent url($src) no-repeat center center;
+	width: 152px;
+	height: 37px;
+	display: block;
+	// background: transparent url($src) no-repeat center center;
 }
 @mixin form-icon($src) {
-    z-index: 102;
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-    margin-left: auto;
-    opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: alpha(opacity=100);
-    background: transparent url($src) no-repeat 0% 0%;
-    background-size: cover;
+	z-index: 102;
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+	margin-left: auto;
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	background: transparent url($src) no-repeat 0% 0%;
+	background-size: cover;
 }
 
 @mixin fade-in-animation($name) {
-    animation-name: $name;
-    animation-duration: 2s;
-    
-    @at-root {
-      @keyframes #{$name} {
-        0% {
-            opacity: 0;
-        }
-        
-        100% {
-            opacity: 1;
-        }
-      }
-    }
-  }
+	animation-name: $name;
+	animation-duration: 2s;
+
+	@at-root {
+		@keyframes #{$name} {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@mixin video-hide($time, $c1, $c2, $delay: 0s, $name: video-hide) {
+	animation-name: $name;
+	animation-delay: $delay;
+	animation-duration: $time;
+	animation-timing-function: ease-in;
+
+	@at-root {
+		@keyframes #{$name} {
+			0% {
+				background-color: $c1;
+			}
+
+			100% {
+				background-color: $c2;
+			}
+		}
+	}
+}
+
+@mixin text-in($time, $c1, $c2, $delay: 0s, $name: text-in) {
+	animation-name: $name;
+	animation-delay: $delay;
+	animation-duration: $time;
+	animation-timing-function: ease-in;
+
+	@at-root {
+		@keyframes #{$name} {
+			0% {
+				color: $c1;
+			}
+
+			100% {
+				color: $c2;
+			}
+		}
+	}
+}
