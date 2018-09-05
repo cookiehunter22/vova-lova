@@ -199,9 +199,9 @@ module.exports = function () {
 	// editing.  Should look at Django/Ghost which has an object layer to access
 	// the routes by keynames to reduce the maintenance of changing urls
 
-	// Direct url link to a specific post
-	_helpers.postUrl = function (postSlug, options) {
-		return '/blog/post/' + postSlug;
+	// Direct url link to a specific news
+	_helpers.newsUrl = function (newsSlug, options) {
+		return '/news/' + newsSlug;
 	};
 
 	// might be a ghost helper

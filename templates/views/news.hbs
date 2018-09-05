@@ -1,0 +1,54 @@
+ {{!
+< default}} <!-- IMAGE NEWS BANNER -->
+
+    {{#with singleNews}}
+    <div class="row text-center image-overlay" id="main">
+
+        <div class="image-banner" id="main" style="	background: url({{{image.secure_url}}}) no-repeat center center; background-size: cover;
+"></div>
+        <div class="on-screen-text">
+            <h1 class="first-line text-uppercase">новости фонда</h1>
+        </div>
+    </div>
+
+    <!-- NEWS BODY -->
+
+    <div class="row text-center pt-7-rem news-body" id="about">
+        <div class="col-12">
+            <h5 class="text-uppercase main-title mb-0">{{{title}}}</h5>
+            <div class="small-line mx-auto"></div>
+            <div class="w-75 mx-auto m-5">
+                {{{content.full}}}
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <i class="far fa-calendar-alt"></i>
+                    <p class="date">{{{date date format='MMMM YYYY'}}}</p>
+                </div>
+
+                {{#if tag}}
+                <div class="col-md-3 col-6">
+                    <i class="fas fa-tag"></i>
+                    <p class="tag">{{{tag}}}</p>
+                </div>
+                {{/if}} {{#if content.author}}
+                <div class="col-md-3 offset-md-3 col-12">
+                    <p class="author">Автор статьи: {{{content.author}}}</p>
+                </div>
+                {{/if}}
+
+            </div>
+        </div>
+    </div>
+
+    {{/with}}
+
+    <div class="row text-center pt-7-rem news ml-0" id="news">
+        <div class="col-12">
+            <h5 class="text-uppercase main-title mb-0">Другие новости фонда</h5>
+            <div class="small-line mx-auto"></div>
+        </div>
+        {{> news_carousel}}
+    </div>
+
+    {{>form}}

@@ -12,7 +12,7 @@
     "keystone": "^4.0.0-beta.5",
     "lodash": "^4.13.1",
     "moment": "2.17.1",
-    "node-sass": "4.5.0",
+    "node-sass": "^4.9.3",
     "node-sass-middleware": "^0.11.0"
   },
   "devDependencies": {
@@ -23,6 +23,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "node keystone.js"
+    "start": "node keystone.js",
+    "scss": "node-sass --output-style=compressed -w scss/main.scss -o public/css "
   }
 }

@@ -6780,88 +6780,15 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
-.row {
-  margin-right: 0 !important;
-  margin-left: 0 !important; }
-
-.main-title {
-  color: #282828; }
-
-.white-title {
-  color: white; }
-
-.pt-4i8-rem {
-  padding-top: 4.8rem !important; }
-
-.pt-7-rem {
-  padding-top: 7rem !important;
-  padding-bottom: 7rem; }
-
-.small-line {
-  z-index: 423;
-  width: 22px;
-  height: 3px;
-  border-color: #000000;
-  background-color: #bbbbbb;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  position: relative; }
-
-.navigation {
+@media (max-width: 991.98px) {
+  .video .iframe {
+    display: none; } }
+.video img {
   width: 100%;
-  z-index: 474;
-  border-style: solid;
-  border-color: #b9b9b9;
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  position: fixed;
-  border-width: 0px 0px 1px;
-  background: #ffffff url(../images/geometric-bg-1.svg) no-repeat center center;
-  background-size: cover; }
-  .navigation img {
-    width: 140px; }
-    @media (max-width: 991.98px) {
-      .navigation img {
-        width: 100px; } }
-  .navigation .navbar-toggler {
-    border-color: transparent; }
-  .navigation .active .nav-link {
-    color: #3d89cd !important; }
-  .navigation a.nav-link {
-    color: black !important;
-    font-size: 0.8rem; }
-    .navigation a.nav-link:hover, .navigation a.nav-link:focus {
-      color: #3d89cd !important; }
-  .navigation.down {
-    opacity: 1; }
-  .navigation.top {
-    animation-name: fade-in;
-    animation-duration: 2s;
-    position: relative !important;
-    margin-bottom: -82px;
-    background: transparent;
-    background-color: transparent !important;
-    border-style: none; }
-@keyframes fade-in {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-    .navigation.top a.nav-link {
-      color: white !important; }
-      .navigation.top a.nav-link:hover, .navigation.top a.nav-link:focus {
-        color: #3d89cd !important; }
-    @media (max-width: 991.98px) {
-      .navigation.top {
-        display: none; } }
-
-.video video {
-  width: 100%;
-  height: auto; }
+  display: none; }
   @media (max-width: 991.98px) {
-    .video video {
-      display: none; } }
+    .video img {
+      display: block; } }
 .video .video-cover {
   background: url(../images/pattern.png) repeat left top;
   position: absolute;
@@ -7178,5 +7105,81 @@ a.text-dark:hover, a.text-dark:focus {
     @media (max-width: 767.98px) {
       .footer img {
         width: 30%; } }
+
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important; }
+
+.main-title {
+  color: #282828; }
+
+.white-title {
+  color: white; }
+
+.pt-4i8-rem {
+  padding-top: 4.8rem !important; }
+
+.pt-7-rem {
+  padding-top: 7rem !important;
+  padding-bottom: 7rem; }
+
+.small-line {
+  z-index: 423;
+  width: 22px;
+  height: 3px;
+  border-color: #000000;
+  background-color: #bbbbbb;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  position: relative; }
+
+.navigation {
+  width: 100%;
+  z-index: 474;
+  border-style: solid;
+  border-color: #b9b9b9;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  position: fixed;
+  border-width: 0px 0px 1px;
+  background: #ffffff url(../images/geometric-bg-1.svg) no-repeat center center;
+  background-size: cover; }
+  .navigation img {
+    width: 140px; }
+    @media (max-width: 991.98px) {
+      .navigation img {
+        width: 100px; } }
+  .navigation .navbar-toggler {
+    border-color: transparent; }
+  .navigation .active .nav-link {
+    color: #3d89cd !important; }
+  .navigation a.nav-link {
+    color: black !important;
+    font-size: 0.8rem; }
+    .navigation a.nav-link:hover, .navigation a.nav-link:focus {
+      color: #3d89cd !important; }
+  .navigation.down {
+    opacity: 1; }
+  .navigation.top {
+    animation-name: fade-in;
+    animation-duration: 2s;
+    position: relative !important;
+    margin-bottom: -82px;
+    background: transparent;
+    background-color: transparent !important;
+    border-style: none; }
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+    .navigation.top a.nav-link {
+      color: white !important; }
+      .navigation.top a.nav-link:hover, .navigation.top a.nav-link:focus {
+        color: #3d89cd !important; }
+    @media (max-width: 991.98px) {
+      .navigation.top {
+        display: none; } }
 
 /*# sourceMappingURL=main.css.map */
