@@ -28,6 +28,28 @@ module.exports = function () {
 		}
 	};
 
+	// Get year array
+
+	_helpers.allYears = function (array) {
+		if (array.length === 0) return;
+		var controls = [
+			'<p class="year-controls active" data-filter="all">Все</p>',
+		];
+		var years = array.map(function (project) {
+			return project.date.getFullYear();
+		});
+		years = [...new Set(years)].map(function (year) {
+			return `<p class="year-controls" data-filter="${year}">${year}</p>`;
+		});
+
+		return controls.concat(years).join(' ');
+	};
+
+	// get year from date
+	_helpers.getYear = function (date) {
+		return date.getFullYear();
+	};
+
 	/**
 	 * Port of Ghost helpers to support cross-theming
 	 * ==============================================

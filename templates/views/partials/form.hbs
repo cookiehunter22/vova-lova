@@ -1,6 +1,16 @@
 <!-- KONTAKTI -->
 
-<div class="row text-center pt-7-rem contacts" id="contacts">
+<div class="row text-center pt-7-rem contacts" id="contact-form">
+    <!-- OVERLAY -->
+    <div class="overlay hide">
+        <div class="circle-loader">
+            <div class="checkmark draw"></div>
+            <div class="close-icon">
+            </div>
+        </div>
+    </div>
+
+    <!-- /OVERLAY -->
     <div class="col-12 mb-5 mt-4">
         <h5 class="text-uppercase main-title mb-0">контакты</h5>
         <div class="small-line mx-auto"></div>
@@ -41,18 +51,18 @@
 
     </div>
     <div class="col-lg-8 col-12 pr-5 pl-lg-0 pl-5">
-        <form class="mx-auto" action="/contact" method="post">
+        <form class="mx-auto" id="contacts">
             <div class="form-row mb-4">
                 <div class="col-12 col-md-6 mb-2">
-                    <input type="text" class="form-control" name="name" placeholder="Ваше имя">
+                    <input type="text" class="form-control" name="name" placeholder="Ваше имя" required>
                 </div>
                 <div class="col-12 col-md-6 mb-2">
-                    <input type="email" class="form-control" name="email" placeholder="Ваш Email">
+                    <input type="email" class="form-control" name="email" placeholder="Ваш Email" required>
                 </div>
             </div>
             <div class="form-row mb-4">
                 <div class="col-12">
-                    <textarea class="form-control" name="message" placeholder="Ваше сообщение" rows="3" class="w-100"></textarea>
+                    <textarea class="form-control" name="message" placeholder="Ваше сообщение" rows="3" class="w-100" required></textarea>
                 </div>
             </div>
 

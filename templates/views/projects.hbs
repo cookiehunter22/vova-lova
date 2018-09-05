@@ -1,0 +1,68 @@
+{{!
+<default}} <!-- IMAGE 1-->
+
+    {{#each projects}} {{#if content.full}}
+    <div class="row text-center image-overlay shadow">
+        <div class="image-banner project" style="background: url({{{image.secure_url}}}) no-repeat center center; background-size: cover;"></div>
+    </div>
+
+    <!-- PROJECT 1 -->
+
+    <div class="row text-center pt-7-rem news-body" id="{{{slug}}}">
+        <div class="col-12">
+            <h5 class="text-uppercase main-title mb-0">{{{title}}}</h5>
+            <div class="small-line mx-auto"></div>
+            <div class="w-75 mx-auto m-5">
+                {{{content.full}}}
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <i class="far fa-calendar-alt"></i>
+                    <p class="date">{{{date date format='MMMM YYYY'}}}</p>
+                </div>
+                {{#if tag}}
+                <div class="col-md-3 col-6">
+                    <i class="fas fa-tag"></i>
+                    <p class="tag">{{{tag}}}</p>
+                </div>
+                {{/if}} {{#if content.author}}
+                <div class="col-md-6 col-12">
+                    <p class="author">Автор статьи: {{{content.author}}}</p>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+    {{/if}} {{/each}} {{!--
+    <!-- IMAGE 2-->
+
+    <div class="row text-center image-overlay project">
+        <div class="image-banner project" id="main"></div>
+    </div>
+
+    <!-- PROJECT 2 -->
+
+    <div class="row text-center pt-7-rem news-body" id="2">
+        <div class="col-12">
+            <h5 class="text-uppercase main-title mb-0">Тайтл</h5>
+            <div class="small-line mx-auto"></div>
+            <p class="w-75 mx-auto m-5">
+                Фонд Николая Расторгуева был учреждён народным артистом России Н.В. Расторгуевым в октябре 2014 года и является инициатором
+                ряда благотворительных проектов, направленных на помощь детям-воспитанникам российских детских домов. Также
+                Фонд участвует в деятельности, связанной с поддержкой искусства и культуры.
+            </p>
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <i class="far fa-calendar-alt"></i>
+                    <p class="date">Июнь 16</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <i class="fas fa-tag"></i>
+                    <p class="tag">ПКНР</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <p class="author">Автор статьи: NAKWJDNLAKWND</p>
+                </div>
+            </div>
+        </div>
+    </div> --}} {{>form}}

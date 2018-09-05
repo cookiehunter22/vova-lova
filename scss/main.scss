@@ -10,6 +10,7 @@ $link-blue: #3d89cd;
 @import "single_news";
 @import "index";
 @import "projects";
+@import "form";
 .row {
 	margin-right: 0 !important;
 	margin-left: 0 !important;
@@ -31,7 +32,7 @@ $link-blue: #3d89cd;
 }
 
 .small-line {
-	z-index: 423;
+	z-index: -1;
 	width: 22px;
 	height: 3px;
 	border-color: #000000;

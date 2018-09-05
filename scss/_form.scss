@@ -1,0 +1,142 @@
+.contacts {
+	.overlay {
+		z-index: 20;
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		height: 100%;
+		background-color: black;
+		opacity: 0.7;
+		transition: all 0.3s;
+
+		&.hide {
+			opacity: 0;
+			transition: all 0.3s;
+			z-index: -1;
+		}
+	}
+	textarea {
+		z-index: 10;
+	}
+
+	// Define vars we'll be using
+	$brand-success: $link-blue;
+	$loader-size: 7em;
+	$fail-color: red;
+	$check-height: $loader-size/2;
+	$check-width: $check-height/2;
+	$check-left: ($loader-size/6 + $loader-size/12);
+	$check-thickness: 3px;
+	$check-color: $brand-success;
+
+	.circle-loader {
+		margin-bottom: $loader-size/2;
+		border: 2px solid rgba(0, 0, 0, 0.2);
+		border-left-color: $check-color;
+		animation: loader-spin 1.2s infinite linear;
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		border-radius: 50%;
+		width: $loader-size;
+		height: $loader-size;
+		top: 50%;
+	}
+
+	.load-complete {
+		-webkit-animation: none;
+		animation: none;
+		border-color: $check-color;
+		transition: border 500ms ease-out;
+
+		&.fail {
+			border-color: $fail-color;
+			transform: border 500ms ease-out;
+		}
+	}
+
+	.checkmark {
+		display: none;
+
+		&.draw:after {
+			animation-duration: 800ms;
+			animation-timing-function: ease;
+			animation-name: checkmark;
+			transform: scaleX(-1) rotate(135deg);
+		}
+
+		&:after {
+			opacity: 1;
+			height: $check-height;
+			width: $check-width;
+			transform-origin: left top;
+			border-right: $check-thickness solid $check-color;
+			border-top: $check-thickness solid $check-color;
+			content: "";
+			left: $check-left;
+			top: $check-height;
+			position: absolute;
+		}
+	}
+
+	@keyframes loader-spin {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes checkmark {
+		0% {
+			height: 0;
+			width: 0;
+			opacity: 1;
+		}
+		20% {
+			height: 0;
+			width: $check-width;
+			opacity: 1;
+		}
+		40% {
+			height: $check-height;
+			width: $check-width;
+			opacity: 1;
+		}
+		100% {
+			height: $check-height;
+			width: $check-width;
+			opacity: 1;
+		}
+	}
+	.close-icon {
+		visibility: hidden;
+		position: absolute;
+		right: 39px;
+		top: 26px;
+		width: 32px;
+		height: 32px;
+		opacity: 1;
+
+		&.show {
+			visibility: visible;
+		}
+	}
+	.close-icon:before,
+	.close-icon:after {
+		position: absolute;
+		left: 15px;
+		content: " ";
+		height: 60px;
+		width: 3px;
+		background-color: $fail-color;
+	}
+	.close-icon:before {
+		transform: rotate(45deg);
+	}
+	.close-icon:after {
+		transform: rotate(-45deg);
+	}
+}

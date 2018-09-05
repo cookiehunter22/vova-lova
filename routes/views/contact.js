@@ -48,5 +48,5 @@ exports = module.exports = function (req, res) {
 
 	var newEnquiry = new Enquiry.model(req.body);
 	newEnquiry.save();
-	res.redirect('/');
+	res.status(200).send();
 };
