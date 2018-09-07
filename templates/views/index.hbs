@@ -1,39 +1,47 @@
- {{!
+{{!
 < default}} <!-- VIDEO BANNER -->
 
 
 
-	<div class="row text-center video" id="main">
+	<div class="row text-center video scroll-section" id="main">
+		{{#if video}}
+
 		<div class="col-12 pr-0 pl-0">
-			<img src="assets/video.png" class="video-hide"></img>
+			<img src="{{{video.image.secure_url}}}" class="video-hide"></img>
 			<!-- <video loop preload="auto" muted poster="assets/video.png" autoplay>
                 <source src="assets/video.webm" type="video/webm">
                 <source src="assets/video.mp4" type="video/mp4">
             </video> -->
-			<div class="iframe" style="position:relative;height:0;padding-bottom:56.29%"><iframe src="https://www.youtube.com/embed/YiB9Fm4Sg9U?ecver=2&playlist=YiB9Fm4Sg9U&autoplay=1&controls=0&disablekb=1&fs=0&loop=1&modestbranding=1&rel=0&showinfo=0&mute=1"
+			<div class="iframe" style="position:relative;height:0;padding-bottom:56.29%"><iframe src="https://www.youtube.com/embed/{{video.youtubeId}}?ecver=2&playlist={{video.youtubeId}}&autoplay=1&controls=0&disablekb=1&fs=0&loop=1&modestbranding=1&rel=0&showinfo=0&mute=1"
 				 style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media"
 				 allowfullscreen></iframe></div>
+
+
 			<div class="video-cover"></div>
 			<div class="on-screen-text">
-				<h3 class="first-line">БЛАГОТВОРИТЕЛЬНЫЙ ПРОЕКТ </h3>
-				<h3 class="first-line">«НАЙДИ МЕНЯ, МАМА»</h3>
-				<h3>ПРЕСС-КОНФЕРЕНЦИЯ В МИА «РОССИЯ СЕГОДНЯ»</h3>
-				<a href=""><h5><i class="fab fa-youtube"></i> СМОТРЕТЬ</h5></a>
+				<h3 class="first-line">{{{video.line1}}}</h3>
+				<h3 class="first-line">{{{video.line2}}}</h3>
+				<h3>{{{video.line3}}}</h3>
+				<a href="https://youtu.be/{{{video.youtubeId}}}">
+					<h5><i class="fab fa-youtube"></i> СМОТРЕТЬ</h5>
+				</a>
 			</div>
 		</div>
+		{{/if}}
 	</div>
+
 
 	<!-- O FONDE -->
 
-	<div class="row text-center pt-7-rem o-fonde" id="about">
+	<div class="row text-center pt-7-rem o-fonde scroll-section" id="about">
 		<div class="col-12">
-			<h5 class="text-uppercase main-title mb-0">о фонде</h5>
+			{{#if oFonde}}
+			<h5 class="text-uppercase main-title mb-0">{{{oFonde.title}}}</h5>
 			<div class="small-line mx-auto"></div>
-			<p class="w-75 mx-auto">
-				Фонд Николая Расторгуева был учреждён народным артистом России Н.В. Расторгуевым в октябре 2014 года и является инициатором
-				ряда благотворительных проектов, направленных на помощь детям-воспитанникам российских детских домов. Также Фонд участвует
-				в деятельности, связанной с поддержкой искусства и культуры.
-			</p>
+			<div class="w-75 mx-auto">
+				{{{oFonde.text}}}
+			</div>
+			{{/if}}
 		</div>
 	</div>
 
@@ -44,12 +52,13 @@
 
 	<!-- PARTNERS -->
 
-	<div class="row text-center pt-7-rem pb-0 partners" id="partners">
+	<div class="row text-center pt-7-rem pb-0 partners scroll-section" id="partners">
 		<div class="col-12">
 			<h5 class="text-uppercase main-title mb-0">наши партнеры</h5>
 			<div class="small-line mx-auto"></div>
 			<p class="w-75 mx-auto">
-				От лица всего коллектива благодарю партнёров Фонда, без которых наши проекты не могли бы состояться. Делать добро вместе
+				От лица всего коллектива благодарю партнёров Фонда, без которых наши проекты не могли бы состояться. Делать добро
+				вместе
 				— это то, ради чего Фонд был создан.
 			</p>
 			<p class=" mt-5"><span class="main-title">НИКОЛАЙ РАСТОРГУЕВ /</span> ПРЕЗИДЕНТ ФОНДА</p>
@@ -102,7 +111,7 @@
 
 	<!-- BANNER RASTORGUEV -->
 
-	<div class="row align-items-center pt-4i8-rem" id="management">
+	<div class="row align-items-center pt-4i8-rem scroll-section" id="management">
 		<div class="col-12 rastorguev">
 			<div class="row pt-5 pb-5 align-items-center h-100">
 				<div class="col-md-6 col-12 offset-0 offset-md-6">
@@ -123,35 +132,27 @@
 	<div class="row text-center pt-7-rem management">
 		<div class="col-12">
 			<h5 class="text-uppercase main-title mb-5">руководство фонда</h5>
+			{{#if managers}}
+
 			<div class="row mt-5">
+				{{#each managers}}
 				<div class="col-12 col-md-4">
 					<div class="management_card mx-auto">
-						<img src="images/ivanov.jpg" alt="" class="mb-5">
-						<h6 class="text-uppercase main-title">александр иванов</h6>
-						<p class="text-uppercase">вице-президент фонда</p>
+						<img src="{{{image.secure_url}}}" alt="" class="mb-5">
+						<h6 class="text-uppercase main-title">{{{name}}}</h6>
+						<p class="text-uppercase">{{{position}}}</p>
 					</div>
 				</div>
-				<div class="col-12 col-md-4">
-					<div class="management_card mx-auto">
-						<img src="images/skr.jpg" alt="" class="mb-5">
-						<h6 class="text-uppercase main-title">надежда скрипак</h6>
-						<p class="text-uppercase">арт-директор</p>
-					</div>
-				</div>
-				<div class="col-12 col-md-4">
-					<div class="management_card mx-auto">
-						<img src="images/nik.jpg" alt="" class="mb-5">
-						<h6 class="text-uppercase main-title">игорь николенко</h6>
-						<p class="text-uppercase">вице-президент фонда</p>
-					</div>
-				</div>
+				{{/each}}
+
 			</div>
+			{{/if}}
 		</div>
 	</div>
 
 	<!-- NOVOSTI -->
 
-	<div class="row text-center pt-7-rem news ml-0" id="news">
+	<div class="row text-center pt-7-rem news ml-0 scroll-section" id="news">
 		<div class="col-12">
 			<h5 class="text-uppercase main-title mb-0">новости фонда / пресс-служба</h5>
 			<div class="small-line mx-auto"></div>

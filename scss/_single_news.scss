@@ -47,3 +47,14 @@
 		margin: 10px 0;
 	}
 }
+
+.video#news-video {
+	z-index: 100;
+	box-shadow: 0 0px 3px black;
+	position: relative;
+	.iframe {
+		@include media-breakpoint-down(md) {
+			display: block;
+		}
+	}
+}

@@ -5,12 +5,12 @@
         <div class="news-box">
             <div class="img-container" style="background: url({{{image.secure_url}}}) no-repeat center center; background-size: cover;"></div>
 
-            <a class="text-uppercase text-center" {{#if content.full}}href="{{newsUrl slug}}" {{/if}}>{{{title}}}</a>
+            <a class="text-uppercase text-center" {{#if content.full}} href="{{newsUrl slug}}" {{/if}}>{{{title}}}</a>
             <p class="description">{{{content.description}}}</p>
             <div class="row text-center mb-2">
                 <div class="col-6">
                     <i class="far fa-calendar-alt"></i>
-                    <p class="date">{{{date date format='MMMM YYYY'}}}</p>
+                    <p class="date">{{{date date format='DD MMMM YYYY'}}}</p>
                 </div>
                 {{#if tag}}
                 <div class="col-6">

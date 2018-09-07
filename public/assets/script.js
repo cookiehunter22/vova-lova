@@ -2,7 +2,12 @@ let lastScrollTop = 0;
 
 function setNavClass () {
 	let screenTop = $(document).scrollTop();
-	let video = $('.video').height();
+	let video
+		= $('.video').height()
+		|| $('.docs').height()
+		|| $('.image-overlay')
+			.first()
+			.height();
 	const dif = video - screenTop;
 	let st = $(this).scrollTop();
 	if (dif >= 100) {
@@ -15,6 +20,30 @@ function setNavClass () {
 	}
 
 	lastScrollTop = st;
+}
+
+function setActiveLink () {
+	var windscroll = $(window).scrollTop();
+	var topSection
+		= $('.video').height()
+		|| $('.docs').height()
+		|| $('.image-overlay')
+			.first()
+			.height();
+	if (windscroll >= 100) {
+		$('.scroll-section').each(function (i) {
+			if ($(this).position().top <= windscroll + 100) {
+				$('.nav-link').removeClass('active');
+
+				$('.nav-link')
+					.eq(i)
+					.addClass('active');
+			}
+		});
+	} else {
+		$('.nav-link').removeClass('active');
+		$('.nav-link:first').addClass('active');
+	}
 }
 
 $('.year-controls').click(function () {
@@ -64,14 +93,49 @@ $('form').on('submit', function (event) {
 	return false;
 });
 
-$('.nav-link').click(function () {
+$('.nav-link').click(function (e) {
 	$('.navbar-collapse').collapse('hide');
+	$('.nav-link').removeClass('active');
+	$(this).addClass('active');
 });
 
-$(window).scroll(setNavClass);
+$('.slide').click(function (e) {
+	if (window.location.pathname !== '/') {
+		return;
+	}
+	e.preventDefault();
+	var aid = $(this)
+		.attr('href')
+		.split('/')[1];
+	$('html,body').animate({ scrollTop: $(aid).offset().top }, 'slow');
+});
+
+$(window).scroll(function () {
+	setNavClass();
+	var path = window.location.pathname;
+	if (path === '/') setActiveLink();
+});
 
 $(document).ready(function () {
 	setNavClass();
+	setActiveLink();
+
+	// set right nav link
+	var path = window.location.pathname;
+	if (path === '/documents') {
+		$('.nav-link').removeClass('active');
+		$('.nav-link:last').addClass('active');
+	} else if (path === '/projects') {
+		$('.nav-link').removeClass('active');
+		$('.nav-link')
+			.eq(2)
+			.addClass('active');
+	} else if (path.includes('news')) {
+		$('.nav-link').removeClass('active');
+		$('.nav-link')
+			.eq(5)
+			.addClass('active');
+	}
 });
 
 function submitForm () {

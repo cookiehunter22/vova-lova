@@ -1,4 +1,4 @@
- {{!
+{{!
 < default}} <!-- IMAGE NEWS BANNER -->
 
     {{#with singleNews}}
@@ -23,7 +23,7 @@
             <div class="row">
                 <div class="col-md-3 col-6">
                     <i class="far fa-calendar-alt"></i>
-                    <p class="date">{{{date date format='MMMM YYYY'}}}</p>
+                    <p class="date">{{{date date format='DD MMMM YYYY'}}}</p>
                 </div>
 
                 {{#if tag}}
@@ -40,6 +40,18 @@
             </div>
         </div>
     </div>
+
+    {{#if video.youtubeId}}
+    <div class="row text-center video" id="news-video">
+        <div class="col-12 pr-0 pl-0">
+
+            <div class="iframe" style="position:relative;height:0;padding-bottom:56.29%"><iframe src="https://www.youtube.com/embed/{{video.youtubeId}}?ecver=2&playlist={{video.youtubeId}}&autoplay=0&controls=0&disablekb=1&fs=0&loop=0&modestbranding=1&rel=0&showinfo=0&mute=0"
+                    style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
+        </div>
+    </div>
+    {{/if}}
 
     {{/with}}
 

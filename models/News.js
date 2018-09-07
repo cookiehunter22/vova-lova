@@ -8,8 +8,8 @@ var Types = keystone.Field.Types;
 var News = new keystone.List('News', {
 	autokey: { path: 'slug', from: 'title', unique: true },
 	map: { name: 'title' },
-	singular: 'News',
-	plural: 'News',
+	singular: 'Новости',
+	plural: 'Новости',
 	defaultSort: '-createdAt',
 });
 
@@ -32,6 +32,9 @@ News.add({
 		description: { type: String, required: true, default: 'НЕТ ОПИСАНИЯ' },
 		full: { type: Types.Html, wysiwyg: true, height: 400 },
 		author: { type: String },
+	},
+	video: {
+		youtubeId: { type: String },
 	},
 });
 

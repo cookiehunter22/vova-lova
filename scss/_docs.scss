@@ -1,0 +1,77 @@
+.docs {
+	.image-banner {
+		background: url(../images/docs_bg-u3510-fr.png) no-repeat center center;
+	}
+	.on-screen-text {
+		background: #4196a936;
+	}
+}
+
+.news-body {
+	.doc-img {
+		background: url(../images/pdf-icon.svg) no-repeat center center;
+		background-size: contain;
+		max-width: 400px;
+		width: 100%;
+		height: 300px;
+	}
+	.doc-wrapper {
+		padding: 0 100px 0 100px;
+		p {
+			color: black;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+// .image-banner {
+// 	background: url(../images/orlyata_start.jpg) no-repeat center center;
+// 	background-size: cover;
+// 	filter: blur(2px);
+// 	width: 100%;
+// 	height: 100%;
+// 	z-index: 0;
+// 	position: absolute;
+// }
+// .image-overlay {
+// 	z-index: 8;
+// 	position: relative;
+// 	width: 100%;
+// 	height: 370px;
+// 	box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+
+// 	.on-screen-text {
+// 		z-index: 11;
+// 		padding: 250px 20px 0 20px;
+// 		width: 100%;
+// 		color: white;
+// 		background: url(../images/pattern.png) repeat left top;
+// 		background-color: rgba(5, 139, 183, 0.3);
+// 		h1 {
+// 			@include media-breakpoint-down(sm) {
+// 				font-size: 2.2rem;
+// 			}
+// 		}
+// 	}
+// }
+
+// .news-body {
+// 	position: relative;
+// 	z-index: 9;
+// 	background: #ffffff url(../images/geometic-bg-white-5.jpg?crc=132465958)
+// 		no-repeat center center;
+// 	background-size: cover;
+// 	.date,
+// 	.tag,
+// 	.author,
+// 	i {
+// 		font-size: 0.6rem;
+// 		display: inline;
+// 	}
+// 	br {
+// 		display: block;
+// 		margin: 10px 0;
+// 	}
+// }

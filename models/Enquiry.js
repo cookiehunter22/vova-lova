@@ -9,6 +9,8 @@ var Types = keystone.Field.Types;
 var Enquiry = new keystone.List('Enquiry', {
 	nocreate: true,
 	noedit: true,
+	singular: 'Сщщбщение',
+	plural: 'Сообщения',
 });
 
 Enquiry.add({
