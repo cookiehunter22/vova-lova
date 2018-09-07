@@ -14,6 +14,7 @@ keystone.init({
 	'name': 'pknr',
 	'brand': 'pknr',
 	'session store': 'mongo',
+	'port': process.env.PORT || 80,
 	'host': process.env.IP || '62.109.24.221',
 	'sass': 'public',
 	'static': 'public',
