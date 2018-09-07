@@ -14,7 +14,7 @@ keystone.init({
 	'name': 'pknr',
 	'brand': 'pknr',
 	'session store': 'mongo',
-	'host': process.env.IP || '127.0.0.1',
+	'host': process.env.IP || '62.109.24.221',
 	'sass': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
