@@ -17,7 +17,7 @@ console.log(process.env.CLOUDINARY_URL ? 'Done!' : 'None');
 // and documentation
 
 keystone.init({
-	'name': 'ФНР',
+	'name': 'pknr',
 	'brand': 'ФНР',
 	'session store': 'mongo',
 	'port': process.env.PORT || 3000,

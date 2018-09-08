@@ -17,8 +17,8 @@ exports.create = {
 			'isAdmin': true,
 		},
 		{
-			'name.first': 'Vova Lova',
-			'name.last': 'User',
+			'name.first': 'Vova',
+			'name.last': 'Lova',
 			'email': 'oxsanych@gmail.com',
 			'password': 'vova-lova',
 			'isAdmin': true,
