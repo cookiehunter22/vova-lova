@@ -32,11 +32,11 @@ News.add({
 		autoCleanup: true,
 		folder: 'news_small',
 	},
-	// imageBig: {
-	// 	type: Types.CloudinaryImage,
-	// 	autoCleanup: true,
-	// 	folder: 'news_big',
-	// },
+	imageBig: {
+		type: Types.CloudinaryImage,
+		autoCleanup: true,
+		folder: 'news_big',
+	},
 	content: {
 		description: { type: String, required: true, default: 'НЕТ ОПИСАНИЯ' },
 		full: { type: Types.Html, wysiwyg: true, height: 400 },

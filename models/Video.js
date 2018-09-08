@@ -13,12 +13,12 @@ var Video = new keystone.List('Video', {
 
 Video.add({
 	title: { type: String, required: true },
-	linkToNews: { type: String },
 	state: {
 		type: Types.Select,
 		options: 'draft, published',
 		default: 'draft',
 	},
+	linkToNews: { type: String },
 	youtubeId: { type: String },
 	image: { type: Types.CloudinaryImage, autoCleanup: true, folder: 'video' },
 	line1: { type: String },

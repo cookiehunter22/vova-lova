@@ -24,7 +24,12 @@ User.add(
 	},
 	'Permissions',
 	{
-		isAdmin: { type: Boolean, label: 'Can access Keystone', index: true },
+		isAdmin: {
+			type: Boolean,
+			label: 'Имеет доступ к редактированию',
+			index: true,
+		},
+		// isDeadPool: { type: Boolean, label: 'Может создавать и удалять пользователей', index: true },
 	}
 );
 
