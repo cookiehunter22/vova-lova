@@ -38,8 +38,6 @@ keystone.init({
 		helpers: new require('./templates/views/helpers')(),
 		extname: '.hbs',
 	}).engine,
-
-	'auto update': true,
 	'session': true,
 	'auth': true,
 	'user model': 'User',
@@ -66,7 +64,7 @@ keystone.set('routes', require('./routes'));
 keystone.set('nav', {
 	'Сообщения': 'enquiries',
 	'Пользователи': 'users',
-	'Контент': 'Pages',
+	// 'Контент': 'Pages',
 	'Видео Баннер': 'Video',
 	'О Фонде': 'OFonde',
 
