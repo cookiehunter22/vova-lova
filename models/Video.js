@@ -13,6 +13,7 @@ var Video = new keystone.List('Video', {
 
 Video.add({
 	title: { type: String, required: true },
+	linkToNews: { type: String },
 	state: {
 		type: Types.Select,
 		options: 'draft, published',

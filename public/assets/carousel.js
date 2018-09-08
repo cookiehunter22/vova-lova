@@ -7,8 +7,8 @@ $(document).ready(function () {
 		accessibility: false,
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		nextArrow: $('.arrow-next'),
-		prevArrow: $('.arrow-prev'),
+		nextArrow: $('#news .arrow-next'),
+		prevArrow: $('#news .arrow-prev'),
 		responsive: [
 			{
 				breakpoint: 1024,
@@ -58,8 +58,8 @@ $(document).ready(function () {
 		accessibility: false,
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		nextArrow: $('.arrow-next'),
-		prevArrow: $('.arrow-prev'),
+		nextArrow: $('#projects .arrow-next'),
+		prevArrow: $('#projects .arrow-prev'),
 		responsive: [
 			{
 				breakpoint: 1024,

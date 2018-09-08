@@ -22,6 +22,10 @@
 		height: 100%;
 		z-index: 1;
 		top: 0px;
+
+		@include media-breakpoint-down(md) {
+			background-color: transparent;
+		}
 	}
 
 	.on-screen-text {
@@ -38,17 +42,20 @@
 		@include video-hide(13s, black, rgba(0, 0, 0, 0.2));
 
 		@include media-breakpoint-down(md) {
+			animation-name: none;
+		}
+
+		@include media-breakpoint-down(md) {
 			// border-top: solid 2px transparent;
 			padding-top: 20px;
+			border: none;
+			background-color: transparent;
 		}
 
 		h3 {
-			// @include text-in(5s, black, white);
 			@include media-breakpoint-down(md) {
 				font-size: 1.4rem;
-			}
-			@include media-breakpoint-down(sm) {
-				font-size: 0.8rem;
+				visibility: hidden;
 			}
 		}
 
@@ -99,6 +106,10 @@
 		left: 0;
 		width: 100%;
 		z-index: -1;
+	}
+	.arrow-next,
+	.arrow-prev {
+		top: 35%;
 	}
 	.projects-controls {
 		margin-bottom: 40px;
@@ -243,6 +254,7 @@
 		color: $link-blue;
 	}
 }
+
 .arrow-next {
 	right: 6%;
 }

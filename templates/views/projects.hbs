@@ -2,7 +2,7 @@
 <default}} <!-- IMAGE 1-->
 
     {{#each projects}} {{#if content.full}}
-    <div class="row text-center image-overlay shadow project">
+    <div class="row text-center image-overlay shadow project" id="{{{slug}}}">
         {{!-- <div class="image-banner project" style="background: url({{{image.secure_url}}}) no-repeat center center; background-size: cover;"></div>
         --}}
         <img src="{{{imageBig.secure_url}}}" alt="" />
@@ -13,7 +13,7 @@
 
     <!-- PROJECT 1 -->
 
-    <div class="row text-center pt-7-rem news-body" id="{{{slug}}}">
+    <div class="row text-center pt-7-rem news-body">
         <div class="col-12">
             <h5 class="text-uppercase main-title mb-0">{{{title}}}</h5>
             <div class="small-line mx-auto"></div>
