@@ -10,7 +10,7 @@ var Projects = new keystone.List('Projects', {
 	map: { name: 'title' },
 	singular: 'Проект',
 	plural: 'Проекты',
-	defaultSort: '-createdAt',
+	defaultSort: '-date',
 });
 
 Projects.add({
@@ -27,12 +27,21 @@ Projects.add({
 		inputFormat: 'DD-MM-YYYY',
 		default: Date.now,
 	},
-	image: { type: Types.CloudinaryImage, autoCleanup: true },
+	image: {
+		type: Types.CloudinaryImage,
+		autoCleanup: true,
+		folder: 'projects_small',
+	},
+	imageBig: {
+		type: Types.CloudinaryImage,
+		autoCleanup: true,
+		folder: 'projects_big',
+	},
 	content: {
 		full: { type: Types.Html, wysiwyg: true, height: 400 },
 		author: { type: String },
 	},
 });
 
-Projects.defaultColumns = 'title|15%, date|20%, state|20%, publishedAt|15%';
+Projects.defaultColumns = 'title|15%, date|20%, state|20%';
 Projects.register();

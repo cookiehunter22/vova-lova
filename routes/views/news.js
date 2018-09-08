@@ -10,7 +10,10 @@ exports = module.exports = function (req, res) {
 	};
 
 	view.on('init', function (next) {
-		var q = keystone.list('News').model.find({ state: 'published' });
+		var q = keystone
+			.list('News')
+			.model.find({ state: 'published' })
+			.sort({ date: -1 });
 
 		q.exec(function (err, result) {
 			locals.news = result;

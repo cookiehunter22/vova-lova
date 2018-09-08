@@ -1,6 +1,9 @@
 <div class="col-12 carousel-container">
     {{# if news}}
+    <i class="fas fa-angle-left arrow-prev"></i>
+    <i class="fas fa-angle-right arrow-next"></i>
     <div class="news-carousel">
+
         {{# each news}}
         <div class="news-box">
             <div class="img-container" style="background: url({{{image.secure_url}}}) no-repeat center center; background-size: cover;"></div>

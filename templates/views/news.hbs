@@ -2,10 +2,12 @@
 < default}} <!-- IMAGE NEWS BANNER -->
 
     {{#with singleNews}}
-    <div class="row text-center image-overlay" id="main">
+    <div class="row text-center image-overlay project" id="main">
 
-        <div class="image-banner" id="main" style="	background: url({{{image.secure_url}}}) no-repeat center center; background-size: cover;
+        {{!-- <div class="image-banner" id="main" style="	background: url({{{image.secure_url}}}) no-repeat center center; background-size: cover;
 "></div>
+        --}}
+        <img src="{{{imageBig.secure_url}}}" alt="" />
         <div class="on-screen-text">
             <h1 class="first-line text-uppercase">новости фонда</h1>
         </div>

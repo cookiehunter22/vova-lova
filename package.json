@@ -27,7 +27,7 @@
     "lint": "eslint .",
     "start": "node keystone.js",
     "scss": "node-sass --output-style=compressed -w scss/main.scss -o public/css ",
-    "postcss": "postcss public/css/main.css -u autoprefixer -m -w -o public/css/styles.css",
+    "postcss": "postcss public/css/main.css -u autoprefixer -m -r",
     "styles": "concurrently \"npm:scss\" \"npm:postcss\""
   }
 }

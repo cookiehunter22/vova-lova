@@ -2,8 +2,13 @@
 <default}} <!-- IMAGE 1-->
 
     {{#each projects}} {{#if content.full}}
-    <div class="row text-center image-overlay shadow">
-        <div class="image-banner project" style="background: url({{{image.secure_url}}}) no-repeat center center; background-size: cover;"></div>
+    <div class="row text-center image-overlay shadow project">
+        {{!-- <div class="image-banner project" style="background: url({{{image.secure_url}}}) no-repeat center center; background-size: cover;"></div>
+        --}}
+        <img src="{{{imageBig.secure_url}}}" alt="" />
+
+
+        <div class="on-screen-text"></div>
     </div>
 
     <!-- PROJECT 1 -->

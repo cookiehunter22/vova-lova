@@ -23,5 +23,5 @@ Managers.add({
 	image: { type: Types.CloudinaryImage, autoCleanup: true },
 });
 
-Managers.defaultColumns = 'title|15%, date|20%, state|20%, publishedAt|15%';
+Managers.defaultColumns = 'name|15%, state|20%';
 Managers.register();

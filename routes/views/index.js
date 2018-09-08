@@ -12,9 +12,15 @@ exports = module.exports = function (req, res) {
 	view.on('init', function (next) {
 		var q1 = keystone.list('Video').model.findOne({ state: 'published' });
 		var q2 = keystone.list('OFonde').model.findOne();
-		var q3 = keystone.list('Projects').model.find({ state: 'published' });
+		var q3 = keystone
+			.list('Projects')
+			.model.find({ state: 'published' })
+			.sort({ date: -1 });
 		var q4 = keystone.list('Managers').model.find({ state: 'published' });
-		var q5 = keystone.list('News').model.find({ state: 'published' });
+		var q5 = keystone
+			.list('News')
+			.model.find({ state: 'published' })
+			.sort({ date: -1 });
 
 		q1.exec(function (err, result) {
 			locals.video = result;

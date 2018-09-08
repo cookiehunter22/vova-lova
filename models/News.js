@@ -10,7 +10,7 @@ var News = new keystone.List('News', {
 	map: { name: 'title' },
 	singular: 'Новости',
 	plural: 'Новости',
-	defaultSort: '-createdAt',
+	defaultSort: '-date',
 });
 
 News.add({
@@ -27,7 +27,16 @@ News.add({
 		inputFormat: 'DD-MM-YYYY',
 		default: Date.now,
 	},
-	image: { type: Types.CloudinaryImage, autoCleanup: true },
+	image: {
+		type: Types.CloudinaryImage,
+		autoCleanup: true,
+		folder: 'news_small',
+	},
+	imageBig: {
+		type: Types.CloudinaryImage,
+		autoCleanup: true,
+		folder: 'news_big',
+	},
 	content: {
 		description: { type: String, required: true, default: 'НЕТ ОПИСАНИЯ' },
 		full: { type: Types.Html, wysiwyg: true, height: 400 },
@@ -38,5 +47,5 @@ News.add({
 	},
 });
 
-News.defaultColumns = 'title|15%, date|20%, state|20%, publishedAt|15%';
+News.defaultColumns = 'title|15%, date|20%, state|20%';
 News.register();

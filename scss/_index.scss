@@ -128,11 +128,9 @@
 		}
 		.news-box {
 			border: solid 2px transparent;
-			filter: grayscale(100%);
 
 			&:hover {
 				border-bottom: solid 2px $link-blue;
-				filter: grayscale(0%);
 				color: $link-blue;
 			}
 		}
@@ -179,7 +177,8 @@
 @include media-breakpoint-down(sm) {
 	.rastorguev {
 		background: transparent url(../images/rast_bg-u21992-fr_small.png) no-repeat
-			center 15%;
+			center center;
+		background-size: cover;
 	}
 }
 
@@ -232,6 +231,23 @@
 	background-size: cover;
 	box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.25);
 	position: relative;
+}
+
+.arrow-next,
+.arrow-prev {
+	position: absolute;
+	top: 50%;
+	font-size: 2.5rem;
+
+	&:hover {
+		color: $link-blue;
+	}
+}
+.arrow-next {
+	right: 6%;
+}
+.arrow-prev {
+	left: 6%;
 }
 
 .carousel-container {
