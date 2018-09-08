@@ -6,6 +6,12 @@ require('dotenv').config();
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
 
+// Check env variables
+
+console.log(process.env.PORT ? 'Done!' : 'Using Default');
+console.log(process.env.IP ? 'Done!' : 'Using Default');
+console.log(process.env.CLOUDINARY_URL ? 'Done!' : 'None');
+
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
 // and documentation
@@ -14,16 +20,14 @@ keystone.init({
 	'name': 'pknr',
 	'brand': 'pknr',
 	'session store': 'mongo',
-	'port': process.env.PORT || 80,
-	'host': process.env.IP || '62.109.24.221',
+	'port': process.env.PORT || 3000,
+	'host': process.env.IP || 'localhost',
 	'sass': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': '.hbs',
-	'cloudinary config':
-		process.env.CLOUDINARY_URL
-		|| 'cloudinary://569318915877669:_a5Pp3uKOoAmnQRNOYPr-GtSquc@hhv2anbjv',
+	'cloudinary config': process.env.CLOUDINARY_URL,
 
 	'custom engine': handlebars.create({
 		layoutsDir: 'templates/views/layouts',
