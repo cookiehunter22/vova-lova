@@ -20,7 +20,7 @@ Managers.add({
 		options: 'draft, published',
 		default: 'draft',
 	},
-	image: { type: Types.CloudinaryImage, autoCleanup: true },
+	image: { type: Types.CloudinaryImage, autoCleanup: true, folder: 'managers' },
 });
 
 Managers.defaultColumns = 'name|15%, state|20%';

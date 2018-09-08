@@ -19,7 +19,7 @@ Video.add({
 		default: 'draft',
 	},
 	youtubeId: { type: String },
-	image: { type: Types.CloudinaryImage, autoCleanup: true },
+	image: { type: Types.CloudinaryImage, autoCleanup: true, folder: 'video' },
 	line1: { type: String },
 	line2: { type: String },
 	line3: { type: String },
