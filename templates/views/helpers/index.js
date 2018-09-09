@@ -50,6 +50,37 @@ module.exports = function () {
 		return date.getFullYear();
 	};
 
+	// Set img background
+	_helpers.setBackground = function (url) {
+		return `background: transparent url(${url}) no-repeat center center;	background-size: cover;`;
+	};
+
+	// Set img news title
+	_helpers.setNewsBlockTitle = function (news) {
+		return news.titleOtherNews ? news.titleOtherNews : news.title;
+	};
+
+	// return partner img class
+	_helpers.setPartnersClass = function (array) {
+		if (array.length === 0) return '';
+		let counter = 0;
+		return array
+			.map(function (item) {
+				counter++;
+				let col = 'col-lg-2';
+				if (counter === 3) {
+					col = 'col-lg-3';
+					counter = 0;
+				}
+				return `
+			<div class="${col} col-md-4 col-12 pt-4 pb-4">
+				<img src="${item.image.secure_url}" class="par1 mx-auto" alt="">
+			</div>
+			`;
+			})
+			.join(' ');
+	};
+
 	/**
 	 * Port of Ghost helpers to support cross-theming
 	 * ==============================================

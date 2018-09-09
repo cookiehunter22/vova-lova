@@ -29,7 +29,7 @@
 	<!-- NAVBAR -->
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed navigation">
-		<a class="navbar-brand mr-5" href="#">
+		<a class="navbar-brand mr-5" href="/">
 			<img src="/images/fnr_logo.svg">
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -70,25 +70,28 @@
 	{{{body}}}
 
 	<!-- FOOTER -->
-
+	{{#if content.footer}}
+	{{#with content.footer}}
 	<div class="row footer text-center pt-5 pb-3">
 		<div class="col-md-2 col-6 order-md-1 order-2">
 			<a href="/"><img src="/images/fnr_logo_black.svg" class="h-100"></a>
 		</div>
 		<div class="col-md-8 col-12 order-md-2">
 			<p class="mx-auto">
-				НКО «ФОНД ПОДДЕРЖКИ КИНО, РАДИО, ТЕЛЕВИДЕНИЯ, МУЛЬТИМЕДИА И АНИМАЦИИ НИКОЛАЯ РАСТОРГУЕВА»</p>
+				{{{line1}}}</p>
 			<p>
-				ОГРН 1147799015870 | ИНН 7707492261 | КПП 770701001
+				{{{line2}}}
 			</p>
 			<p>
-				МОСКВА, 127055, 1-Й ТИХВИНСКИЙ ТУПИК, Д. 5-7
+				{{{line3}}}
 			</p>
 		</div>
 		<div class="col-md-2 col-6 order-md-3 order-3">
 			<img src="/images/bravo.svg" class="h-100">
 		</div>
 	</div>
+	{{/with}}
+	{{/if}}
 
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

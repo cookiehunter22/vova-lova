@@ -1,30 +1,42 @@
-<div class="col-12 carousel-container">
-    {{# if news}}
-    <i class="fas fa-angle-left arrow-prev"></i>
-    <i class="fas fa-angle-right arrow-next"></i>
-    <div class="news-carousel">
+{{#if content.news}}
 
-        {{# each news}}
-        <div class="news-box">
-            <div class="img-container" style="background: url({{{image.secure_url}}}) no-repeat center center; background-size: cover;"></div>
-
-            <a class="text-uppercase text-center" {{#if content.full}} href="{{newsUrl slug}}" {{/if}}>{{{title}}}</a>
-            <p class="description">{{{content.description}}}</p>
-            <div class="row text-center mb-2">
-                <div class="col-6">
-                    <i class="far fa-calendar-alt"></i>
-                    <p class="date">{{{date date format='DD MMMM YYYY'}}}</p>
-                </div>
-                {{#if tag}}
-                <div class="col-6">
-                    <i class="fas fa-tag"></i>
-                    <p class="tag">{{{tag}}}</p>
-                </div>
-                {{/if}}
-            </div>
-        </div>
-        {{/each}}
+<div class="row text-center pt-7-rem news ml-0 scroll-section" id="news">
+    <div class="col-12">
+        <h5 class="text-uppercase main-title mb-0">{{setNewsBlockTitle content.news}}</h5>
+        <div class="small-line mx-auto"></div>
+        <p class="w-75 mx-auto mb-5">{{{content.news.text}}}</p>
+        </p>
     </div>
-    {{/if}}
+    <div class="col-12 carousel-container">
+        {{#if newsSlides}}
+        <i class="fas fa-angle-left arrow-prev"></i>
+        <i class="fas fa-angle-right arrow-next"></i>
+        <div class="news-carousel">
 
+            {{#each newsSlides}}
+            <div class="news-box">
+                <div class="img-container" style="background: url({{{image.secure_url}}}) no-repeat center center; background-size: cover;"></div>
+
+                <a class="text-uppercase text-center" {{#if content.full}} href="{{newsUrl slug}}" {{/if}}>{{{title}}}</a>
+                <p class="description">{{{content.description}}}</p>
+                <div class="row text-center mb-2">
+                    <div class="col-6">
+                        <i class="far fa-calendar-alt"></i>
+                        <p class="date">{{{date date format='DD MMMM YYYY'}}}</p>
+                    </div>
+                    {{#if tag}}
+                    <div class="col-6">
+                        <i class="fas fa-tag"></i>
+                        <p class="tag">{{{tag}}}</p>
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/if}}
+
+    </div>
 </div>
+
+{{/if}}

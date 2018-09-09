@@ -1,5 +1,10 @@
 <!-- KONTAKTI -->
 
+{{#if content.contacts}}
+{{#with content.contacts}}
+
+
+
 <div class="row text-center pt-7-rem contacts scroll-section" id="contact-form">
     <!-- OVERLAY -->
     <div class="overlay hide">
@@ -12,13 +17,9 @@
 
     <!-- /OVERLAY -->
     <div class="col-12 mb-5 mt-4">
-        <h5 class="text-uppercase main-title mb-0">контакты</h5>
+        <h5 class="text-uppercase main-title mb-0">{{{title}}}</h5>
         <div class="small-line mx-auto"></div>
-        <p class="w-75 mx-auto">
-            Чтобы задать вопрос, вы можете воспользоваться формой обратной. По всем вопросам сотрудничества с фондом
-            Николая Расторгуева
-            пишите на адрес электронной почты.
-        </p>
+        <p class="w-75 mx-auto">{{{text}}}</p>
     </div>
     <div class="col-lg-4 col-12 text-left mb-4">
         <div class="row align-items-center">
@@ -27,7 +28,7 @@
             </div>
             <div class="col-10 text-left">
                 <h6 class="main-title text-uppercase mb-0 h-100 align-middle">
-                    информация
+                    {{{info}}}
                 </h6>
             </div>
 
@@ -36,7 +37,7 @@
             </div>
             <div class="col-10 text-left">
                 <h6 class="main-title mb-0 h-100 align-middle">
-                    МОСКВА, 127055, 1-й Тихвинский тупик, д. 5-7
+                    {{{address}}}
                 </h6>
             </div>
 
@@ -45,7 +46,7 @@
             </div>
             <div class="col-10 text-left">
                 <h6 class="main-title mb-0 h-100 align-middle">
-                    info@nr-fund.ru
+                    {{{email}}}
                 </h6>
             </div>
         </div>
@@ -80,3 +81,7 @@
         </form>
     </div>
 </div>
+
+
+{{/with}}
+{{/if}}

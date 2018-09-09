@@ -1,13 +1,18 @@
 <!-- PROJECTS -->
-{{#if projects}}
+
+{{#if content.projects}}
+{{#if projectSlides}}
 <div class="row text-center pt-7-rem projects scroll-section" id="projects">
     <div class="col-12">
-        <h5 class="text-uppercase main-title mb-5">проекты фонда</h5>
+        <h5 class="text-uppercase main-title mb-5">{{{content.projects.title}}}</h5>
+        <div class="w-75 mx-auto">
+            {{{content.projects.text}}}
+        </div>
 
         <!-- ADD DYNAMIC HERE ! -->
 
         <div class="projects-controls">
-            {{{allYears projects}}}
+            {{{allYears projectSlides}}}
         </div>
 
         <div class="col-12 carousel-container">
@@ -15,7 +20,7 @@
             <i class="fas fa-angle-right arrow-next"></i>
             <div class="projects-carousel">
 
-                {{#each projects}}
+                {{#each projectSlides}}
                 <div class="news-box text-center" data-year="{{getYear date}}">
                     <a href="/projects#{{{slug}}}">
 
@@ -29,4 +34,5 @@
         </div>
     </div>
 </div>
+{{/if}}
 {{/if}}

@@ -163,7 +163,8 @@
 	@include partner("../images/safmar.svg");
 }
 
-.rastorguev {
+.rastorguev,
+.rastorguev-small {
 	z-index: 37;
 	height: 512.9500000000007px;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
@@ -185,11 +186,18 @@
 		}
 	}
 }
-@include media-breakpoint-down(sm) {
-	.rastorguev {
-		background: transparent url(../images/rast_bg-u21992-fr_small.png) no-repeat
-			center center;
-		background-size: cover;
+.rastorguev {
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
+}
+.rastorguev-small {
+	display: none;
+	background: transparent url(../images/rast_bg-u21992-fr_small.png) no-repeat
+		center center;
+	background-size: cover;
+	@include media-breakpoint-down(sm) {
+		display: block;
 	}
 }
 

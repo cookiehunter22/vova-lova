@@ -17,7 +17,7 @@ Projects.add({
 	title: { type: String, required: true },
 	state: {
 		type: Types.Select,
-		options: 'draft, published, archived',
+		options: 'draft, published',
 		default: 'draft',
 	},
 	tag: { type: String },

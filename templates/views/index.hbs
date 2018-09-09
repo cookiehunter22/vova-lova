@@ -1,72 +1,90 @@
 {{!
 < default}} <!-- VIDEO BANNER -->
-
-
-
+	{{{content}}}
 	<div class="row text-center video scroll-section" id="main">
-		{{#if video}}
+		{{#if content.video}}
+		{{#with content.video}}
+
 
 		<div class="col-12 pr-0 pl-0">
-			<img src="{{{video.image.secure_url}}}" class="video-hide"></img>
+			<img src="{{{image.secure_url}}}" class="video-hide"></img>
 			<!-- <video loop preload="auto" muted poster="assets/video.png" autoplay>
                 <source src="assets/video.webm" type="video/webm">
                 <source src="assets/video.mp4" type="video/mp4">
             </video> -->
-			<div class="iframe" style="position:relative;height:0;padding-bottom:56.29%"><iframe src="https://www.youtube.com/embed/{{video.youtubeId}}?ecver=2&playlist={{video.youtubeId}}&autoplay=1&controls=0&disablekb=1&fs=0&loop=1&modestbranding=1&rel=0&showinfo=0&mute=1"
+			<div class="iframe" style="position:relative;height:0;padding-bottom:56.29%"><iframe src="https://www.youtube.com/embed/{{youtubeId}}?ecver=2&playlist={{video.youtubeId}}&autoplay=1&controls=0&disablekb=1&fs=0&loop=1&modestbranding=1&rel=0&showinfo=0&mute=1"
 				 style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media"
 				 allowfullscreen></iframe></div>
 
 
 			<div class="video-cover"></div>
 			<div class="on-screen-text">
-				<h3 class="first-line text-uppercase">{{{video.line1}}}</h3>
-				<h3 class="first-line text-uppercase">{{{video.line2}}}</h3>
-				<h3 class="text-uppercase">{{{video.line3}}}</h3>
-				{{#if video.linkToNews}}
-				<a href="{{{video.linkToNews}}}">
+				<h3 class="first-line text-uppercase">{{{line1}}}</h3>
+				<h3 class="first-line text-uppercase">{{{line2}}}</h3>
+				<h3 class="text-uppercase">{{{line3}}}</h3>
+				{{#if linkToNews}}
+				<a href="{{{linkToNews}}}">
 					<h5><i class="fab fa-youtube"></i> СМОТРЕТЬ</h5>
 				</a>
 				{{/if}}
 			</div>
 		</div>
+		{{/with}}
 		{{/if}}
 	</div>
 
 
 	<!-- O FONDE -->
+	{{#if content.oFonde}}
+	{{#with content.oFonde}}
 
 	<div class="row text-center pt-7-rem o-fonde scroll-section" id="about">
 		<div class="col-12">
-			{{#if oFonde}}
-			<h5 class="text-uppercase main-title mb-0">{{{oFonde.title}}}</h5>
+
+			<h5 class="text-uppercase main-title mb-0">{{{title}}}</h5>
 			<div class="small-line mx-auto"></div>
 			<div class="w-75 mx-auto">
-				{{{oFonde.text}}}
+				{{{text}}}
 			</div>
-			{{/if}}
+
 		</div>
 	</div>
+	{{/with}}
+	{{/if}}
+
 
 	<!-- PROJECTS -->
+
+
+
 
 	{{>projects_carousel}}
 
 
+
+
+
 	<!-- PARTNERS -->
+
+	{{#if content.partners}}
 
 	<div class="row text-center pt-7-rem pb-0 partners scroll-section" id="partners">
 		<div class="col-12">
-			<h5 class="text-uppercase main-title mb-0">наши партнеры</h5>
+			<h5 class="text-uppercase main-title mb-0">{{{content.partners.title}}}</h5>
 			<div class="small-line mx-auto"></div>
 			<p class="w-75 mx-auto">
-				От лица всего коллектива благодарю партнёров Фонда, без которых наши проекты не могли бы состояться. Делать добро
-				вместе
-				— это то, ради чего Фонд был создан.
+				{{{content.partners.text}}}
 			</p>
-			<p class=" mt-5"><span class="main-title">НИКОЛАЙ РАСТОРГУЕВ /</span> ПРЕЗИДЕНТ ФОНДА</p>
+			<p class=" mt-5"><span class="main-title">{{{content.partners.subtitle.name}}}</span>
+				{{{content.partners.subtitle.position}}}</p>
 		</div>
+
+		{{#if partners}}
+
 		<div class="row mx-auto mt-5 pl-lg-5 pr-lg-5 justify-content-center">
-			<div class="col-lg-2 col-md-4 col-12 pt-4 pb-4">
+
+			{{{setPartnersClass partners}}}
+			{{!-- <div class="col-lg-2 col-md-4 col-12 pt-4 pb-4">
 				<img src="images/safmar.svg" class="par1 mx-auto" alt="">
 			</div>
 			<div class="col-lg-2 col-md-4 col-12 pt-4 pb-4">
@@ -101,6 +119,7 @@
 				<img src="images/dep_obraz_mos.svg" class="par1 mx-auto" alt="">
 			</div>
 
+
 			<div class="col-lg-2 col-md-4 col-12 pt-4 pb-4">
 				<img src="images/nash-dom_logo.svg" class="par1 mx-auto" alt="">
 			</div>
@@ -109,34 +128,58 @@
 			</div>
 			<div class="col-lg-2 col-md-4 col-12 pt-4 pb-4">
 				<img src="images/posolstvo_horvatii.svg" class="par1 mx-auto" alt="">
-			</div>
+			</div> --}}
 
 		</div>
+
+		{{/if}}
 	</div>
+
+	{{/if}}
 
 	<!-- BANNER RASTORGUEV -->
 
+	{{#if content.rastorguev}}
+	{{#with content.rastorguev}}
+
 	<div class="row align-items-center pt-4i8-rem scroll-section" id="management">
-		<div class="col-12 rastorguev">
+		<div class="col-12 rastorguev" style="{{setBackground nrBig.secure_url}}">
 			<div class="row pt-5 pb-5 align-items-center h-100">
 				<div class="col-md-6 col-12 offset-0 offset-md-6">
 					<div class="banner-text">
-						<h3 class="text-uppercase white-title">николай растогуев
-							</h5>
-							<h5 class="text-uppercase white-title mb-0">президент фонда</h5>
+						<h3 class="text-uppercase white-title">{{{line1}}}</h5>
+							<h5 class="text-uppercase white-title mb-0">{{{line2}}}</h5>
 					</div>
+				</div>
+			</div>
+		</div>
 
-
+		<div class="col-12 rastorguev-small" style="{{setBackground nrSmall.secure_url}}">
+			<div class="row pt-5 pb-5 align-items-center h-100">
+				<div class="col-md-6 col-12 offset-0 offset-md-6">
+					<div class="banner-text">
+						<h3 class="text-uppercase white-title">{{{line1}}}</h5>
+							<h5 class="text-uppercase white-title mb-0">{{{line2}}}</h5>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
+
+	{{/with}}
+	{{/if}}
+
 	<!-- MANAGEMENT -->
+	{{#if content.management}}
 
 	<div class="row text-center pt-7-rem management">
 		<div class="col-12">
-			<h5 class="text-uppercase main-title mb-5">руководство фонда</h5>
+			<h5 class="text-uppercase main-title mb-5">{{{content.management.title}}}</h5>
+			<p class="w-75 mx-auto">
+				{{{content.management.text}}}
+			</p>
+
 			{{#if managers}}
 
 			<div class="row mt-5">
@@ -154,18 +197,14 @@
 			{{/if}}
 		</div>
 	</div>
+	{{/if}}
 
 	<!-- NOVOSTI -->
 
-	<div class="row text-center pt-7-rem news ml-0 scroll-section" id="news">
-		<div class="col-12">
-			<h5 class="text-uppercase main-title mb-0">новости фонда</h5>
-			<div class="small-line mx-auto"></div>
-			<p class="w-75 mx-auto mb-5">
-				В этом разделе мы регулярно размещаем публикации о текущей деятельности Фонда.
-			</p>
-		</div>
-		{{> news_carousel}}
-	</div>
+	{{> news_carousel}}
+
+	{{!-- Kontacts --}}
+
+
 
 	{{> form}}

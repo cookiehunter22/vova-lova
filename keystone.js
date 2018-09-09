@@ -5,7 +5,7 @@ require('dotenv').config();
 // Require keystone
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
-// var defaultSetter = require('./default_content/defaultSetter');
+var defaultSetter = require('./default_content/defaultSetter');
 
 // Check env variables
 
@@ -64,9 +64,10 @@ keystone.set('routes', require('./routes'));
 keystone.set('nav', {
 	'Сообщения': 'enquiries',
 	'Пользователи': 'users',
-	// 'Контент': 'Pages',
+	'Контент': 'Pages',
 	'Видео Баннер': 'Video',
 	'О Фонде': 'OFonde',
+	'Партнеры': 'Partners',
 
 	'Проекты': 'projects',
 	'Руководство': 'managers',
@@ -78,4 +79,4 @@ keystone.set('nav', {
 keystone.start();
 
 // set default content
-// defaultSetter();
+defaultSetter();

@@ -1,281 +1,119 @@
 module.exports = [
 	{
-		name: 'видео баннер',
-
-		// Video block
+		// video
+		name: 'video',
+		page: 'видео баннер',
 		video: {
 			state: 'published',
-			linkToNews: '/',
-			youtubeId: 'YaZg8wg39QQ',
+			linkToNews: '/news/dubrovnik-art-forum-2017',
+			youtubeId: '-cVxKw1oXlI',
 
-			line1: 'line1',
-			line2: 'line2',
-			line3: 'line3',
+			line1: '',
+			line2: 'Второй фестиваль русского искусства в Хорватии',
+			line3: '«Дубровник. Арт-Форум 2017»',
 		},
 	},
 
-	// 	// O Fonde
-	// 	oFonde: {
-	// 		title: {
-	// 			type: String,
-	// 			dependsOn: { name: ['о фонде'] },
-	// 		},
-	// 		text: {
-	// 			type: Types.Html,
-	// 			wysiwyg: true,
-	// 			height: 400,
-	// 			collapse: true,
-	// 			dependsOn: { name: ['о фонде'] },
-	// 		},
-	// 	},
+	// O Fonde
+	{
+		name: 'oFonde',
+		page: 'о фонде',
+		oFonde: {
+			title: 'о фонде',
+			text:
+				'Фонд Николая Расторгуева был учреждён народным артистом России Н.В. Расторгуевым в октябре 2014 года и является инициатором ряда благотворительных проектов, направленных на помощь детям-воспитанникам российских детских домов. Также Фонд участвует в деятельности, связанной с поддержкой искусства и культуры.',
+		},
+	},
 	// 	// Proekti fonda
-	// 	projects: {
-	// 		title: {
-	// 			type: String,
-	// 			dependsOn: { name: ['проекты'] },
-	// 		},
-	// 		text: {
-	// 			type: Types.Html,
-	// 			wysiwyg: true,
-	// 			height: 400,
-	// 			collapse: true,
-	// 			dependsOn: { name: ['проекты'] },
-	// 		},
-	// 	},
+	{
+		name: 'projects',
+		page: 'проекты',
+		projects: {
+			title: 'ПРОЕКТЫ ФОНДА',
+
+			text: '',
+		},
+	},
 
 	// 	// Партнеры
-	// 	partners: {
-	// 		title: {
-	// 			type: String,
-	// 			dependsOn: { name: ['партнеры'] },
-	// 		},
-	// 		text: {
-	// 			type: Types.Html,
-	// 			wysiwyg: true,
-	// 			height: 400,
-	// 			collapse: true,
-	// 			dependsOn: { name: ['партнеры'] },
-	// 		},
-	// 		subtitle: {
-	// 			name: { type: String, dependsOn: { name: 'партнеры' } },
-	// 			position: { type: String, dependsOn: { name: 'партнеры' } },
-	// 		},
-	// 		partnerLogo: {
-	// 			type: Types.CloudinaryImages,
-	// 			autoCleanup: true,
-	// 			folder: 'partners',
-	// 			dependsOn: { name: 'партнеры' },
-	// 		},
-	// 	},
+	{
+		name: 'partners',
+		page: 'партнеры',
+		partners: {
+			title: 'наши партнеры',
+			text:
+				'От лица всего коллектива благодарю партнёров Фонда, без которых наши проекты не могли бы состояться. Делать добро вместе — это то, ради чего Фонд был создан.',
+			subtitle: {
+				name: 'НИКОЛАЙ РАСТОРГУЕВ /',
+				position: 'ПРЕЗИДЕНТ ФОНДА',
+			},
+		},
+	},
 
 	// 	// banner
-	// 	rastorguev: {
-	// 		nrBig: {
-	// 			type: Types.CloudinaryImage,
-	// 			autoCleanup: true,
-	// 			folder: 'partners',
-	// 			dependsOn: { name: 'баннер расторгуев' },
-	// 		},
-	// 		nrSmall: {
-	// 			type: Types.CloudinaryImage,
-	// 			autoCleanup: true,
-	// 			folder: 'partners',
-	// 			dependsOn: { name: 'баннер расторгуев' },
-	// 		},
-	// 		line1: { type: String, dependsOn: { name: 'баннер расторгуев' } },
-	// 		line2: { type: String, dependsOn: { name: 'баннер расторгуев' } },
-	// 	},
-	// },
-	// {
-	// 	name: { type: String, required: true, noedit: true },
 
-	// 	// Video block
-	// 	video: {
-	// 		state: {
-	// 			type: Types.Select,
-	// 			options: 'draft, published',
-	// 			default: 'draft',
-	// 			dependsOn: { name: 'видео баннер' },
-	// 		},
-	// 		linkToNews: { type: String, dependsOn: { name: 'видео баннер' } },
-	// 		youtubeId: { type: String, dependsOn: { name: 'видео баннер' } },
-	// 		image: {
-	// 			type: Types.CloudinaryImage,
-	// 			autoCleanup: true,
-	// 			folder: 'video',
-	// 			dependsOn: { name: 'видео баннер' },
-	// 		},
-	// 		line1: { type: String, dependsOn: { name: 'видео баннер' } },
-	// 		line2: { type: String, dependsOn: { name: 'видео баннер' } },
-	// 		line3: { type: String, dependsOn: { name: 'видео баннер' } },
-	// 	},
+	{
+		name: 'rastorguev',
+		page: 'баннер расторгуев',
+		rastorguev: {
+			line1: 'НИКОЛАЙ РАСТОГУЕВ',
+			line2: 'ПРЕЗИДЕНТ ФОНДА',
+		},
+	},
 
-	// 	// O Fonde
-	// 	oFonde: {
-	// 		title: {
-	// 			type: String,
-	// 			dependsOn: { name: ['о фонде'] },
-	// 		},
-	// 		text: {
-	// 			type: Types.Html,
-	// 			wysiwyg: true,
-	// 			height: 400,
-	// 			collapse: true,
-	// 			dependsOn: { name: ['о фонде'] },
-	// 		},
-	// 	},
-	// 	// Proekti fonda
-	// 	projects: {
-	// 		title: {
-	// 			type: String,
-	// 			dependsOn: { name: ['проекты'] },
-	// 		},
-	// 		text: {
-	// 			type: Types.Html,
-	// 			wysiwyg: true,
-	// 			height: 400,
-	// 			collapse: true,
-	// 			dependsOn: { name: ['проекты'] },
-	// 		},
-	// 	},
+	{
+		name: 'management',
+		page: 'руководство',
+		management: {
+			title: 'РУКОВОДСТВО ФОНДА',
+			text: 'test text must be deleted',
+		},
+	},
 
-	// 	// Партнеры
-	// 	partners: {
-	// 		title: {
-	// 			type: String,
-	// 			dependsOn: { name: ['партнеры'] },
-	// 		},
-	// 		text: {
-	// 			type: Types.Html,
-	// 			wysiwyg: true,
-	// 			height: 400,
-	// 			collapse: true,
-	// 			dependsOn: { name: ['партнеры'] },
-	// 		},
-	// 		subtitle: {
-	// 			name: { type: String, dependsOn: { name: 'партнеры' } },
-	// 			position: { type: String, dependsOn: { name: 'партнеры' } },
-	// 		},
-	// 		partnerLogo: {
-	// 			type: Types.CloudinaryImages,
-	// 			autoCleanup: true,
-	// 			folder: 'partners',
-	// 			dependsOn: { name: 'партнеры' },
-	// 		},
-	// 	},
+	// НОВОСТИ
+	{
+		name: 'news',
+		page: 'новости',
+		news: {
+			title: 'новости фонда',
+			titleOtherNews: 'другие новости фонда',
+			text:
+				'В этом разделе мы регулярно размещаем публикации о текущей деятельности Фонда.',
+		},
+	},
+	// // Контакты
+	{
+		name: 'contacts',
+		page: 'контакты',
+		contacts: {
+			title: 'КОНТАКТЫ',
+			text:
+				'Чтобы задать вопрос, вы можете воспользоваться формой обратной связи. По всем вопросам сотрудничества с фондом Николая Расторгуева пишите на адрес электронной почты.',
+			info: 'ИНФОРМАЦИЯ',
+			address: 'МОСКВА, 127055, 1-й Тихвинский тупик, д. 5-7',
+			email: 'info@nr-fund.ru',
+		},
+	},
+	// // ФУТЕР
+	{
+		name: 'footer',
+		page: 'футер',
+		footer: {
+			line1:
+				'НКО «ФОНД ПОДДЕРЖКИ КИНО, РАДИО, ТЕЛЕВИДЕНИЯ, МУЛЬТИМЕДИА И АНИМАЦИИ НИКОЛАЯ РАСТОРГУЕВА»',
+			line2: 'ОГРН 1147799015870 | ИНН 7707492261 | КПП 770701001',
+			line3: 'МОСКВА, 127055, 1-Й ТИХВИНСКИЙ ТУПИК, Д. 5-7',
+		},
+	},
 
-	// 	// banner
-	// 	rastorguev: {
-	// 		nrBig: {
-	// 			type: Types.CloudinaryImage,
-	// 			autoCleanup: true,
-	// 			folder: 'partners',
-	// 			dependsOn: { name: 'баннер расторгуев' },
-	// 		},
-	// 		nrSmall: {
-	// 			type: Types.CloudinaryImage,
-	// 			autoCleanup: true,
-	// 			folder: 'partners',
-	// 			dependsOn: { name: 'баннер расторгуев' },
-	// 		},
-	// 		line1: { type: String, dependsOn: { name: 'баннер расторгуев' } },
-	// 		line2: { type: String, dependsOn: { name: 'баннер расторгуев' } },
-	// 	},
-	// },
-	// {
-	// 	name: { type: String, required: true, noedit: true },
-
-	// 	// Video block
-	// 	video: {
-	// 		state: {
-	// 			type: Types.Select,
-	// 			options: 'draft, published',
-	// 			default: 'draft',
-	// 			dependsOn: { name: 'видео баннер' },
-	// 		},
-	// 		linkToNews: { type: String, dependsOn: { name: 'видео баннер' } },
-	// 		youtubeId: { type: String, dependsOn: { name: 'видео баннер' } },
-	// 		image: {
-	// 			type: Types.CloudinaryImage,
-	// 			autoCleanup: true,
-	// 			folder: 'video',
-	// 			dependsOn: { name: 'видео баннер' },
-	// 		},
-	// 		line1: { type: String, dependsOn: { name: 'видео баннер' } },
-	// 		line2: { type: String, dependsOn: { name: 'видео баннер' } },
-	// 		line3: { type: String, dependsOn: { name: 'видео баннер' } },
-	// 	},
-
-	// 	// O Fonde
-	// 	oFonde: {
-	// 		title: {
-	// 			type: String,
-	// 			dependsOn: { name: ['о фонде'] },
-	// 		},
-	// 		text: {
-	// 			type: Types.Html,
-	// 			wysiwyg: true,
-	// 			height: 400,
-	// 			collapse: true,
-	// 			dependsOn: { name: ['о фонде'] },
-	// 		},
-	// 	},
-	// 	// Proekti fonda
-	// 	projects: {
-	// 		title: {
-	// 			type: String,
-	// 			dependsOn: { name: ['проекты'] },
-	// 		},
-	// 		text: {
-	// 			type: Types.Html,
-	// 			wysiwyg: true,
-	// 			height: 400,
-	// 			collapse: true,
-	// 			dependsOn: { name: ['проекты'] },
-	// 		},
-	// 	},
-
-	// 	// Партнеры
-	// 	partners: {
-	// 		title: {
-	// 			type: String,
-	// 			dependsOn: { name: ['партнеры'] },
-	// 		},
-	// 		text: {
-	// 			type: Types.Html,
-	// 			wysiwyg: true,
-	// 			height: 400,
-	// 			collapse: true,
-	// 			dependsOn: { name: ['партнеры'] },
-	// 		},
-	// 		subtitle: {
-	// 			name: { type: String, dependsOn: { name: 'партнеры' } },
-	// 			position: { type: String, dependsOn: { name: 'партнеры' } },
-	// 		},
-	// 		partnerLogo: {
-	// 			type: Types.CloudinaryImages,
-	// 			autoCleanup: true,
-	// 			folder: 'partners',
-	// 			dependsOn: { name: 'партнеры' },
-	// 		},
-	// 	},
-
-	// 	// banner
-	// 	rastorguev: {
-	// 		nrBig: {
-	// 			type: Types.CloudinaryImage,
-	// 			autoCleanup: true,
-	// 			folder: 'partners',
-	// 			dependsOn: { name: 'баннер расторгуев' },
-	// 		},
-	// 		nrSmall: {
-	// 			type: Types.CloudinaryImage,
-	// 			autoCleanup: true,
-	// 			folder: 'partners',
-	// 			dependsOn: { name: 'баннер расторгуев' },
-	// 		},
-	// 		line1: { type: String, dependsOn: { name: 'баннер расторгуев' } },
-	// 		line2: { type: String, dependsOn: { name: 'баннер расторгуев' } },
-	// 	},
-	// },
+	// // Документы
+	{
+		name: 'docs',
+		page: 'документы',
+		docs: {
+			title: 'УСТАВНЫЕ ДОКУМЕНТЫ ФОНДА',
+			text:
+				'В данном разделе вы можете ознакомиться с уставными документами фонда.',
+		},
+	},
 ];
