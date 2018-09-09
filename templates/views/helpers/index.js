@@ -70,6 +70,7 @@ module.exports = function () {
 				let col = 'col-lg-2';
 				if (counter === 3) {
 					col = 'col-lg-3';
+				} else if (counter === 5) {
 					counter = 0;
 				}
 				return `
