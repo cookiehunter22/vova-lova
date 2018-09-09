@@ -166,5 +166,5 @@ Pages.add({
 	},
 });
 
-Pages.defaultColumns = 'page, updatedBy, updatedAt';
+Pages.defaultColumns = 'name , page, updatedBy, updatedAt';
 Pages.register();
