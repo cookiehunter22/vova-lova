@@ -6,10 +6,10 @@ exports = module.exports = function (req, res) {
 	// Render the view
 	var locals = res.locals;
 
-	view.on('init', function (next) {
+	view.on('init', async function (next) {
 		var q1 = keystone.list('Pages').model.find();
 
-		const result = fetchAsync(q1);
+		const result = await fetchAsync(q1);
 		locals.content = {};
 		for (let i = 0; i < result.length; i++) {
 			const item = result[i];
