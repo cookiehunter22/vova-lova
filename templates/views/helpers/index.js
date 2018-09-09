@@ -65,7 +65,7 @@ module.exports = function () {
 		if (array.length === 0) return '';
 		let counter = 0;
 		return array
-			.map(function (item) {
+			.map(function (item, index) {
 				counter++;
 				let col = 'col-lg-2';
 				if (counter === 3 && index !== array.length - 1) {
