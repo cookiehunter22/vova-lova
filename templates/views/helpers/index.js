@@ -61,14 +61,14 @@ module.exports = function () {
 	};
 
 	// return partner img class
-	_helpers.setPartnersClass = function (array) {
+	_helpers.setPartnersClass = function (array, index) {
 		if (array.length === 0) return '';
 		let counter = 0;
 		return array
 			.map(function (item) {
 				counter++;
 				let col = 'col-lg-2';
-				if (counter === 3) {
+				if (counter === 3 && index !== array.length - 1) {
 					col = 'col-lg-3';
 				} else if (counter === 5) {
 					counter = 0;
