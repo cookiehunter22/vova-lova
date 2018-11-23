@@ -32,3 +32,5 @@ node_modules
 /html
 OFonde.js
 Video.js
+.sass-cache/
+.vscode/

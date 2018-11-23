@@ -18,7 +18,7 @@ console.log(process.env.CLOUDINARY_URL ? 'Done!' : 'None');
 // and documentation
 
 keystone.init({
-	'name': 'pknr',
+	'name': 'FNR',
 	'brand': 'ФНР',
 	'session store': 'mongo',
 	'port': process.env.PORT || 3000,
@@ -65,8 +65,6 @@ keystone.set('nav', {
 	Сообщения: 'enquiries',
 	Пользователи: 'users',
 	Контент: 'Pages',
-	// 'Видео Баннер': 'Video',
-	// 'О Фонде': 'OFonde',
 	Партнеры: 'Partners',
 
 	Проекты: 'projects',
