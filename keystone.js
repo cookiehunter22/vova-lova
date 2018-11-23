@@ -7,7 +7,7 @@ var keystone = require('keystone');
 var handlebars = require('express-handlebars');
 var defaultSetter = require('./default_content/defaultSetter');
 
-// Check env variables
+// Check env vars
 
 console.log(process.env.PORT ? 'Done!' : 'Using Default');
 console.log(process.env.IP ? 'Done!' : 'Using Default');
