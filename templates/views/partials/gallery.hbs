@@ -1,0 +1,14 @@
+{{#with singleNews}}
+{{#if gallery}}
+<div class="col-12">
+  <div class="gallery-grid">
+    {{#each gallery}}
+    <a href="{{this.secure_url}}" class="glightbox">
+      <img src="{{this.secure_url}}" alt="image">
+    </a>
+    {{/each}}
+  </div>
+</div>
+{{/if}}
+
+{{/with}}

@@ -18,15 +18,15 @@ console.log(process.env.CLOUDINARY_URL ? 'Done!' : 'None');
 // and documentation
 
 keystone.init({
-	'name': 'FNR',
-	'brand': 'ФНР',
+	name: 'FNR',
+	brand: 'ФНР',
 	'session store': 'mongo',
-	'port': process.env.PORT || 3000,
-	'host': process.env.IP || 'localhost',
-	'sass': 'public',
-	'static': 'public',
-	'favicon': 'public/favicon.ico',
-	'views': 'templates/views',
+	port: process.env.PORT || 3000,
+	host: process.env.IP || 'localhost',
+	sass: 'public',
+	static: 'public',
+	favicon: 'public/favicon.ico',
+	views: 'templates/views',
 	'view engine': '.hbs',
 	'cloudinary config': process.env.CLOUDINARY_URL,
 	'auto update': true,
@@ -38,8 +38,8 @@ keystone.init({
 		helpers: new require('./templates/views/helpers')(),
 		extname: '.hbs',
 	}).engine,
-	'session': true,
-	'auth': true,
+	session: true,
+	auth: true,
 	'user model': 'User',
 });
 

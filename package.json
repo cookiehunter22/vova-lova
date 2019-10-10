@@ -9,25 +9,51 @@
     "connect-mongo": "^2.0.1",
     "dotenv": "^4.0.0",
     "express-handlebars": "3.0.0",
+    "glightbox": "^2.0.4",
     "handlebars": "4.0.6",
-    "keystone": "^4.0.0",
+    "keystone": "^4.0.0-beta.8",
     "lodash": "^4.13.1",
     "moment": "2.17.1",
-    "node-sass": "^4.9.3",
-    "node-sass-middleware": "^0.11.0"
+    "node-sass-middleware": "^0.11.0",
+    "npm": "^6.12.0"
   },
   "devDependencies": {
+    "autoprefixer": "^9.6.4",
+    "clean-webpack-plugin": "^3.0.0",
     "concurrently": "^4.0.1",
+    "css-loader": "^3.2.0",
     "eslint": "3.15.0",
+    "eslint-config-airbnb": "17.1.0",
     "eslint-config-keystone": "3.0.0",
+    "eslint-config-prettier": "5.0.0",
+    "eslint-plugin-import": "2.17.3",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-prettier": "3.1.0",
     "eslint-plugin-react": "^5.1.1",
-    "nodemon": "^1.18.4"
+    "fast-sass-loader": "^1.5.0",
+    "file-loader": "^4.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.18.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.18.2",
+    "resolve-url-loader": "^3.1.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "terser-webpack-plugin": "^2.1.2",
+    "url-loader": "^2.2.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
   },
   "scripts": {
     "lint": "eslint .",
     "start": "node keystone.js",
+    "build": "webpack && node ./setup_scripts/",
+    "serve": "nodemon keystone.js",
     "scss": "node-sass --output-style=compressed -w scss/main.scss -o public/css ",
     "postcss": "postcss public/css/main.css -u autoprefixer -m -r",
-    "styles": "concurrently \"npm:scss\" \"npm:postcss\""
+    "styles": "concurrently \"npm:scss\" \"npm:postcss\"",
+    "database": "mongod"
   }
 }

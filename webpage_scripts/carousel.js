@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
 	$('.news-carousel').slick({
 		dots: true,
 		infinite: false,
@@ -44,9 +44,6 @@ $(document).ready(function () {
 					arrows: false,
 				},
 			},
-			// You can unslick at a given breakpoint now by adding:
-			// settings: "unslick"
-			// instead of a settings object
 		],
 	});
 
@@ -95,9 +92,6 @@ $(document).ready(function () {
 					arrows: false,
 				},
 			},
-			// You can unslick at a given breakpoint now by adding:
-			// settings: "unslick"
-			// instead of a settings object
 		],
 	});
 });

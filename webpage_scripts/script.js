@@ -1,11 +1,11 @@
 let lastScrollTop = 0;
 
-function setNavClass () {
+function setNavClass() {
 	let screenTop = $(document).scrollTop();
-	let video
-		= $('.video').height()
-		|| $('.docs').height()
-		|| $('.image-overlay')
+	let video =
+		$('.video').height() ||
+		$('.docs').height() ||
+		$('.image-overlay')
 			.first()
 			.height();
 	const dif = video - screenTop;
@@ -22,16 +22,16 @@ function setNavClass () {
 	lastScrollTop = st;
 }
 
-function setActiveLink () {
+function setActiveLink() {
 	var windscroll = $(window).scrollTop();
-	var topSection
-		= $('.video').height()
-		|| $('.docs').height()
-		|| $('.image-overlay')
-			.first()
-			.height();
+	// var topSection =
+	// 	$('.video').height() ||
+	// 	$('.docs').height() ||
+	// 	$('.image-overlay')
+	// 		.first()
+	// 		.height();
 	if (windscroll >= 100) {
-		$('.scroll-section').each(function (i) {
+		$('.scroll-section').each(function(i) {
 			if ($(this).position().top <= windscroll + 100) {
 				$('.nav-link').removeClass('active');
 
@@ -46,7 +46,7 @@ function setActiveLink () {
 	}
 }
 
-$('.year-controls').click(function () {
+$('.year-controls').click(function() {
 	$('.year-controls').removeClass('active');
 	$(this).addClass('active');
 	const filterYear = $(this).data('filter');
@@ -55,11 +55,11 @@ $('.year-controls').click(function () {
 		return;
 	}
 
-	$('.projects-carousel').slick('slickFilter', function () {
+	$('.projects-carousel').slick('slickFilter', function() {
 		return $(this).data('year') == filterYear;
 	});
 });
-$('form').on('submit', function (event) {
+$('form').on('submit', function(event) {
 	event.preventDefault();
 
 	submitForm();
@@ -75,7 +75,7 @@ $('form').on('submit', function (event) {
 				.val(),
 		},
 		contentType: 'application/x-www-form-urlencoded',
-		success: function () {
+		success: function() {
 			setTimeout(submitForm, 2500);
 			setTimeout(successForm, 1000);
 			setTimeout(successForm, 2600);
@@ -84,7 +84,7 @@ $('form').on('submit', function (event) {
 				.find('input[type=text], input[type=email], textarea')
 				.val('');
 		},
-		error: function (res, status, err) {
+		error: function(res, status, err) {
 			setTimeout(submitForm, 2500);
 			setTimeout(failForm, 1000);
 			setTimeout(failForm, 2600);
@@ -93,13 +93,13 @@ $('form').on('submit', function (event) {
 	return false;
 });
 
-$('.nav-link').click(function (e) {
+$('.nav-link').click(function(e) {
 	$('.navbar-collapse').collapse('hide');
 	$('.nav-link').removeClass('active');
 	$(this).addClass('active');
 });
 
-$('.slide').click(function (e) {
+$('.slide').click(function(e) {
 	if (window.location.pathname !== '/') {
 		return;
 	}
@@ -110,13 +110,13 @@ $('.slide').click(function (e) {
 	$('html,body').animate({ scrollTop: $(aid).offset().top }, 'slow');
 });
 
-$(window).scroll(function () {
+$(window).scroll(function() {
 	setNavClass();
 	var path = window.location.pathname;
 	if (path === '/') setActiveLink();
 });
 
-$(document).ready(function () {
+$(document).ready(function() {
 	setNavClass();
 	setActiveLink();
 
@@ -138,21 +138,21 @@ $(document).ready(function () {
 	}
 });
 
-function submitForm () {
+function submitForm() {
 	$('.contacts .overlay').toggleClass('hide');
 }
-function successForm () {
+function successForm() {
 	$('.circle-loader').toggleClass('load-complete');
 	$('.checkmark').toggle();
 }
 
-function failForm () {
+function failForm() {
 	$('.circle-loader').toggleClass('load-complete');
 	$('.circle-loader').toggleClass('fail');
 	$('.close-icon').toggleClass('show');
 }
 
-function test () {
+function test() {
 	submitForm();
 	setTimeout(submitForm, 2500);
 	setTimeout(successForm, 1000);

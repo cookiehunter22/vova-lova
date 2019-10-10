@@ -37,6 +37,11 @@ News.add({
 		autoCleanup: true,
 		folder: 'news_big',
 	},
+	gallery: {
+		type: Types.CloudinaryImages,
+		autoCleanup: true,
+		folder: 'gallery',
+	},
 	content: {
 		description: { type: String, required: true, default: 'НЕТ ОПИСАНИЯ' },
 		full: { type: Types.Html, wysiwyg: true, height: 400 },

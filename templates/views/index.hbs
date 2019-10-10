@@ -1,209 +1,166 @@
 {{!
-< default}} <!-- VIDEO BANNER -->
-	<div class="row text-center video scroll-section" id="main">
-		{{#if content.video}}
-		{{#with content.video}}
+< default}}
+<!-- VIDEO BANNER -->
+<div class="row text-center video scroll-section" id="main">
+	{{#if content.video}}
+	{{#with content.video}}
 
 
-		<div class="col-12 pr-0 pl-0">
-			<img src="{{{image.secure_url}}}" class="video-hide"></img>
-			<!-- <video loop preload="auto" muted poster="assets/video.png" autoplay>
+	<div class="col-12 pr-0 pl-0">
+		<img src="{{{image.secure_url}}}" class="video-hide"></img>
+		<!-- <video loop preload="auto" muted poster="assets/video.png" autoplay>
                 <source src="assets/video.webm" type="video/webm">
                 <source src="assets/video.mp4" type="video/mp4">
             </video> -->
-			<div class="iframe" style="position:relative;height:0;padding-bottom:56.29%"><iframe src="https://www.youtube.com/embed/{{youtubeId}}?ecver=2&playlist={{video.youtubeId}}&autoplay=1&controls=0&disablekb=1&fs=0&loop=1&modestbranding=1&rel=0&showinfo=0&mute=1"
-				 style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media"
-				 allowfullscreen></iframe></div>
+		<div class="iframe" style="position:relative;height:0;padding-bottom:56.29%"><iframe
+				src="https://www.youtube.com/embed/{{youtubeId}}?ecver=2&playlist={{video.youtubeId}}&autoplay=1&controls=0&disablekb=1&fs=0&loop=1&modestbranding=1&rel=0&showinfo=0&mute=1"
+				style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0"
+				allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
 
-			<div class="video-cover"></div>
-			<div class="on-screen-text">
-				<h3 class="first-line text-uppercase">{{{line1}}}</h3>
-				<h3 class="first-line text-uppercase">{{{line2}}}</h3>
-				<h3 class="text-uppercase">{{{line3}}}</h3>
-				{{#if linkToNews}}
-				<a href="{{{linkToNews}}}">
-					<h5><i class="fab fa-youtube"></i> СМОТРЕТЬ</h5>
-				</a>
-				{{/if}}
-			</div>
-		</div>
-		{{/with}}
-		{{/if}}
-	</div>
-
-
-	<!-- O FONDE -->
-	{{#if content.oFonde}}
-	{{#with content.oFonde}}
-
-	<div class="row text-center pt-7-rem o-fonde scroll-section" id="about">
-		<div class="col-12">
-
-			<h5 class="text-uppercase main-title mb-0">{{{title}}}</h5>
-			<div class="small-line mx-auto"></div>
-			<div class="w-75 mx-auto">
-				{{{text}}}
-			</div>
-
-		</div>
-	</div>
-	{{/with}}
-	{{/if}}
-
-
-	<!-- PROJECTS -->
-
-
-
-
-	{{>projects_carousel}}
-
-
-
-
-
-	<!-- PARTNERS -->
-
-	{{#if content.partners}}
-
-	<div class="row text-center pt-7-rem pb-0 partners scroll-section" id="partners">
-		<div class="col-12">
-			<h5 class="text-uppercase main-title mb-0">{{{content.partners.title}}}</h5>
-			<div class="small-line mx-auto"></div>
-			<p class="w-75 mx-auto">
-				{{{content.partners.text}}}
-			</p>
-			<p class=" mt-5"><span class="main-title">{{{content.partners.subtitle.name}}}</span>
-				{{{content.partners.subtitle.position}}}</p>
-		</div>
-
-		{{#if partners}}
-
-		<div class="row mx-auto mt-5 pl-lg-5 pr-lg-5 justify-content-center w-100">
-
-			{{{setPartnersClass partners}}}
-			{{!-- <div class="col-lg-2 col-md-4 col-12 pt-4 pb-4">
-				<img src="images/safmar.svg" class="par1 mx-auto" alt="">
-			</div>
-			<div class="col-lg-2 col-md-4 col-12 pt-4 pb-4">
-				<img src="images/софрахт.svg" class="par1 mx-auto" alt="">
-			</div>
-			<div class="col-lg-3 col-md-4 col-12 pt-4 pb-4">
-				<img src="images/dep_soc_zachiti.svg" class="par1 mx-auto" alt="">
-			</div>
-			<div class="col-lg-2 col-md-4 col-12 pt-4 pb-4">
-				<img src="images/ria.svg" class="par1 mx-auto" alt="">
-			</div>
-
-			<div class="col-lg-2 col-md-4 col-12 pt-4 pb-4">
-				<img src="images/prav_mos.svg" class="par1 mx-auto" alt="">
-			</div>
-
-
-			<div class="col-lg-2 col-md-4 col-12 pt-4 pb-4">
-				<img src="images/рсм_logo.svg" class="par1 mx-auto" alt="">
-			</div>
-			<div class="col-lg-2 col-md-4 col-12 pt-4 pb-4">
-				<img src="images/fm_innovation - positive black 3d.svg" class="par1 mx-auto" alt="">
-			</div>
-			<div class="col-lg-3 col-md-4 col-12 pt-4 pb-4">
-				<img src="images/depcultmos.svg" class="par1 mx-auto" alt="">
-			</div>
-
-			<div class="col-lg-2 col-md-4 col-12 pt-4 pb-4">
-				<img src="images/союз пенсионеровpsd.svg" class="par1 mx-auto" alt="">
-			</div>
-			<div class="col-lg-2 col-md-4 col-12 pt-4 pb-4">
-				<img src="images/dep_obraz_mos.svg" class="par1 mx-auto" alt="">
-			</div>
-
-
-			<div class="col-lg-2 col-md-4 col-12 pt-4 pb-4">
-				<img src="images/nash-dom_logo.svg" class="par1 mx-auto" alt="">
-			</div>
-			<div class="col-lg-2 col-md-4 col-12 pt-4 pb-4">
-				<img src="images/fond_gorchakova.svg" class="par1 mx-auto" alt="">
-			</div>
-			<div class="col-lg-2 col-md-4 col-12 pt-4 pb-4">
-				<img src="images/posolstvo_horvatii.svg" class="par1 mx-auto" alt="">
-			</div> --}}
-
-		</div>
-
-		{{/if}}
-	</div>
-
-	{{/if}}
-
-	<!-- BANNER RASTORGUEV -->
-
-	{{#if content.rastorguev}}
-	{{#with content.rastorguev}}
-
-	<div class="row align-items-center pt-4i8-rem scroll-section" id="management">
-		<div class="col-12 rastorguev" style="{{setBackground nrBig.secure_url}}">
-			<div class="row pt-5 pb-5 align-items-center h-100">
-				<div class="col-md-6 col-12 offset-0 offset-md-6">
-					<div class="banner-text">
-						<h3 class="text-uppercase white-title">{{{line1}}}</h5>
-							<h5 class="text-uppercase white-title mb-0">{{{line2}}}</h5>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-12 rastorguev-small" style="{{setBackground nrSmall.secure_url}}">
-			<div class="row pt-5 pb-5 align-items-center h-100">
-				<div class="col-md-6 col-12 offset-0 offset-md-6">
-					<div class="banner-text">
-						<h3 class="text-uppercase white-title">{{{line1}}}</h5>
-							<h5 class="text-uppercase white-title mb-0">{{{line2}}}</h5>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	{{/with}}
-	{{/if}}
-
-	<!-- MANAGEMENT -->
-	{{#if content.management}}
-
-	<div class="row text-center pt-7-rem management">
-		<div class="col-12">
-			<h5 class="text-uppercase main-title mb-5">{{{content.management.title}}}</h5>
-			<p class="w-75 mx-auto">
-				{{{content.management.text}}}
-			</p>
-
-			{{#if managers}}
-
-			<div class="row mt-5">
-				{{#each managers}}
-				<div class="col-12 col-md-4">
-					<div class="management_card mx-auto">
-						<img src="{{{image.secure_url}}}" alt="" class="mb-5">
-						<h6 class="text-uppercase main-title">{{{name}}}</h6>
-						<p class="text-uppercase">{{{position}}}</p>
-					</div>
-				</div>
-				{{/each}}
-
-			</div>
+		<div class="video-cover"></div>
+		<div class="on-screen-text">
+			<h3 class="first-line text-uppercase">{{{line1}}}</h3>
+			<h3 class="first-line text-uppercase">{{{line2}}}</h3>
+			<h3 class="text-uppercase">{{{line3}}}</h3>
+			{{#if linkToNews}}
+			<a href="{{{linkToNews}}}">
+				<h5><i class="fab fa-youtube"></i> СМОТРЕТЬ</h5>
+			</a>
 			{{/if}}
 		</div>
 	</div>
+	{{/with}}
 	{{/if}}
-
-	<!-- NOVOSTI -->
-
-	{{> news_carousel}}
-
-	{{!-- Kontacts --}}
+</div>
 
 
+<!-- O FONDE -->
+{{#if content.oFonde}}
+{{#with content.oFonde}}
 
-	{{> form}}
+<div class="row text-center pt-7-rem o-fonde scroll-section" id="about">
+	<div class="col-12">
+
+		<h5 class="text-uppercase main-title mb-0">{{{title}}}</h5>
+		<div class="small-line mx-auto"></div>
+		<div class="w-75 mx-auto">
+			{{{text}}}
+		</div>
+
+	</div>
+</div>
+{{/with}}
+{{/if}}
+
+
+<!-- PROJECTS -->
+
+
+
+
+{{>projects_carousel}}
+
+
+
+
+
+<!-- PARTNERS -->
+
+{{#if content.partners}}
+
+<div class="row text-center pt-7-rem pb-0 partners scroll-section" id="partners">
+	<div class="col-12">
+		<h5 class="text-uppercase main-title mb-0">{{{content.partners.title}}}</h5>
+		<div class="small-line mx-auto"></div>
+		<p class="w-75 mx-auto">
+			{{{content.partners.text}}}
+		</p>
+		<p class=" mt-5"><span class="main-title">{{{content.partners.subtitle.name}}}</span>
+			{{{content.partners.subtitle.position}}}</p>
+	</div>
+
+	{{#if partners}}
+
+	<div class="row mx-auto mt-5 pl-lg-5 pr-lg-5 justify-content-center w-100">
+
+		{{{setPartnersClass partners}}}
+
+	</div>
+
+	{{/if}}
+</div>
+
+{{/if}}
+
+<!-- BANNER RASTORGUEV -->
+
+{{#if content.rastorguev}}
+{{#with content.rastorguev}}
+
+<div class="row align-items-center pt-4i8-rem scroll-section" id="management">
+	<div class="col-12 rastorguev" style="{{setBackground nrBig.secure_url}}">
+		<div class="row pt-5 pb-5 align-items-center h-100">
+			<div class="col-md-6 col-12 offset-0 offset-md-6">
+				<div class="banner-text">
+					<h3 class="text-uppercase white-title">{{{line1}}}</h5>
+						<h5 class="text-uppercase white-title mb-0">{{{line2}}}</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12 rastorguev-small" style="{{setBackground nrSmall.secure_url}}">
+		<div class="row pt-5 pb-5 align-items-center h-100">
+			<div class="col-md-6 col-12 offset-0 offset-md-6">
+				<div class="banner-text">
+					<h3 class="text-uppercase white-title">{{{line1}}}</h5>
+						<h5 class="text-uppercase white-title mb-0">{{{line2}}}</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{{/with}}
+{{/if}}
+
+<!-- MANAGEMENT -->
+{{#if content.management}}
+
+<div class="row text-center pt-7-rem management">
+	<div class="col-12">
+		<h5 class="text-uppercase main-title mb-5">{{{content.management.title}}}</h5>
+		<p class="w-75 mx-auto">
+			{{{content.management.text}}}
+		</p>
+
+		{{#if managers}}
+
+		<div class="row mt-5">
+			{{#each managers}}
+			<div class="col-12 col-md-4">
+				<div class="management_card mx-auto">
+					<img src="{{{image.secure_url}}}" alt="" class="mb-5">
+					<h6 class="text-uppercase main-title">{{{name}}}</h6>
+					<p class="text-uppercase">{{{position}}}</p>
+				</div>
+			</div>
+			{{/each}}
+
+		</div>
+		{{/if}}
+	</div>
+</div>
+{{/if}}
+
+<!-- NOVOSTI -->
+
+{{> news_carousel}}
+
+{{!-- Kontacts --}}
+
+
+
+{{> form}}
