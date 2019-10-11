@@ -22,16 +22,29 @@
                 <p class="date">{{{date date format='DD MMMM YYYY'}}}</p>
             </div>
 
-            {{#if tag}}
-            <div class="col-md-3 col-6">
+            <div class="col-6 col-md-3">
+                {{#if tag}}
                 <i class="fas fa-tag"></i>
                 <p class="tag">{{{tag}}}</p>
+                {{/if}}
             </div>
-            {{/if}} {{#if content.author}}
-            <div class="col-md-3 offset-md-3 col-12">
-                <p class="author">Автор статьи: {{{content.author}}}</p>
+            <div class="col-6 col-md-3"></div>
+            <div class="col-md-3">
+                <div class="row">
+                    {{#if content.author}}
+                    <div class="col-6 col-md-5 p-0 text-right"><span class="author">Автор статьи: </span></div>
+                    <div class="col-6 col-md-7 text-left"><span class="author">{{{content.author}}}</span></div>
+                    {{/if}}
+                    {{#if content.authorVideo}}
+                    <div class="col-6 col-md-5 p-0 text-right"><span class="author">Автор видео: </span></div>
+                    <div class="col-6 col-md-7 text-left"><span class="author">{{{content.authorVideo}}}</span></div>
+                    {{/if}}
+                    {{#if content.authorPhoto}}
+                    <div class="col-6 col-md-5 p-0 text-right"><span class="author">Автор фото: </span></div>
+                    <div class="col-6 col-md-7 text-left"><span class="author">{{{content.authorPhoto}}}</span></div>
+                    {{/if}}
+                </div>
             </div>
-            {{/if}}
 
         </div>
     </div>

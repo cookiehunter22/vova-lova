@@ -45,7 +45,9 @@ News.add({
 	content: {
 		description: { type: String, required: true, default: 'НЕТ ОПИСАНИЯ' },
 		full: { type: Types.Html, wysiwyg: true, height: 400 },
-		author: { type: String },
+		author: { type: String, label: 'Автор статьи' },
+		authorVideo: { type: String, label: 'Автор видео' },
+		authorPhoto: { type: String, label: 'Автор фото' },
 	},
 	video: {
 		youtubeId: { type: String },

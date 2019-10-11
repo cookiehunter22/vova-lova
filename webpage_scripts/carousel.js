@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$('.news-carousel').slick({
-		dots: true,
+		dots: false,
 		infinite: false,
 		arrows: true,
 		speed: 300,
@@ -48,7 +48,7 @@ $(document).ready(function() {
 	});
 
 	$('.projects-carousel').slick({
-		dots: true,
+		dots: false,
 		infinite: false,
 		arrows: true,
 		speed: 300,
