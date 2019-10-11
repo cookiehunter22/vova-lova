@@ -9,9 +9,10 @@ var defaultSetter = require('./default_content/defaultSetter');
 
 // Check env vars
 
-console.log(process.env.PORT ? 'Done!' : 'Using Default');
-console.log(process.env.IP ? 'Done!' : 'Using Default');
-console.log(process.env.CLOUDINARY_URL ? 'Done!' : 'None');
+console.log(process.env.PORT ? 'Port: Done!' : 'Port: Using Default');
+console.log(process.env.IP ? 'IP: Done!' : 'IP: Using Default');
+console.log(process.env.MAILGUN_SANDBOX_URL ? 'MAILGUN_SANDBOX_URL: Done!' : 'MAILGUN_SANDBOX_URL: None');
+console.log(process.env.MAILGUN_PRIVATE_API_KEY ? 'MAILGUN_PRIVATE_API_KEY: Done!' : 'MAILGUN_PRIVATE_API_KEY: None');
 
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
