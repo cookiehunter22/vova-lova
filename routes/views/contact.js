@@ -12,9 +12,9 @@ const sendEmail = (data) => {
 		to: SEND_TO_EMAIL,
 		subject: 'Сайт Форма Обратной Связи',
 		text: `
-			Имя: ${data.name}
-			Email: ${data.email}
-			Текст: ${data.text}
+Имя: ${data.name}
+Email: ${data.email}
+Текст: ${data.message || 'ПОЛЬЗОВАТЕЛЬ НЕ ВВЕЛ ТЕКСТ'}
 		`,
 	}, (err, result) => {
 		if (err) {
