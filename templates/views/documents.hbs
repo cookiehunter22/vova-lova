@@ -4,48 +4,40 @@
 
 
 <div class="row text-center docs image-overlay" id="main">
-    <div class="image-banner" id="main"></div>
-    <div class="on-screen-text">
-        <h1 class="first-line text-uppercase">документы</h1>
-    </div>
+	<div class="image-banner" id="main"></div>
+	<div class="on-screen-text">
+		<h1 class="first-line text-uppercase">документы</h1>
+	</div>
 </div>
 
 <!-- Documents -->
 
 <div class="row text-center pt-7-rem news-body" id="about">
-    <div class="col-12">
-        <h5 class="text-uppercase main-title mb-0">УСТАВНЫЕ ДОКУМЕНТЫ ФОНДА</h5>
-        <div class="small-line mx-auto"></div>
-        <p class="w-75 mx-auto m-5">
-            В данном разделе вы можете ознакомиться с уставными документами фонда.
-        </p>
-        <div class="doc-wrapper text-uppercase">
-            <div class="row">
-                <div class="col-lg-4 col-12">
-                    <a href="/docs/ustav.pdf" target="_blank">
-                        <div class="doc-img mx-auto"></div>
-                        <p class="mx-auto">Устав Фонда Николая Расторгуева</p>
-                    </a>
+	<div class="col-12">
+		<h5 class="text-uppercase main-title mb-0">{{{ content.docs.title }}}</h5>
+		<div class="small-line mx-auto"></div>
+		<p class="w-75 mx-auto m-5">
+			{{{ content.docs.text }}}
+		</p>
 
-                </div>
-                <div class="col-lg-4 col-12">
-                    <a href="/docs/svid.jpg" target="_blank">
-                        <div class="doc-img mx-auto"></div>
-                        <p class="mx-auto">Свидетельство о постановке на учет</p>
-                    </a>
+		<div class="doc-wrapper text-uppercase">
+			<div class="row">
 
-                </div>
-                <div class="col-lg-4 col-12">
-                    <a href="/docs/minust.jpg" target="_blank">
-                        <div class="doc-img mx-auto"></div>
-                        <p class="mx-auto">Свидетельство Минюст</p>
-                    </a>
+				{{#each documents}}
+				<div class="col-lg-4 col-12">
+					<a href="{{{ file.secure_url }}}" target="_blank">
+						<div class="doc-img mx-auto"></div>
+						<p class="mx-auto">{{{ title }}}</p>
+					</a>
 
-                </div>
-            </div>
-        </div>
+				</div>
+				{{/each}}
 
-    </div>
+			</div>
+		</div>
+
+
+	</div>
 </div>
 
 {{>form}}

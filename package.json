@@ -26,6 +26,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node keystone.js",
+    "start:dev": "nodemon keystone.js",
     "scss": "node-sass --output-style=compressed -w scss/main.scss -o public/css ",
     "postcss": "postcss public/css/main.css -u autoprefixer -m -r",
     "styles": "concurrently \"npm:scss\" \"npm:postcss\""

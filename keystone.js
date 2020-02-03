@@ -70,6 +70,7 @@ keystone.set('nav', {
 	Проекты: 'projects',
 	Руководство: 'managers',
 	Новости: 'news',
+	Документы: 'documents',
 });
 
 // Start Keystone to connect to your database and initialise the web server

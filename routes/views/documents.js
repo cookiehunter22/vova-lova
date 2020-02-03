@@ -8,13 +8,22 @@ exports = module.exports = function (req, res) {
 
 	view.on('init', async function (next) {
 		var q1 = keystone.list('Pages').model.find();
+		var q2 = keystone
+			.list('Documents')
+			.model.find({ state: 'published' })
+			.sort({ date: 1 });
 
-		const result = await fetchAsync(q1);
+		const [content, documents] = await Promise.all([
+			fetchAsync(q1),
+			fetchAsync(q2),
+		]);
+
 		locals.content = {};
-		for (let i = 0; i < result.length; i++) {
-			const item = result[i];
+		for (let i = 0; i < content.length; i++) {
+			const item = content[i];
 			locals.content[item.name] = item[item.name];
 		}
+		locals.documents = documents;
 		next();
 	});
 	view.render('documents');
