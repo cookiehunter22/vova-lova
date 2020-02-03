@@ -5,14 +5,14 @@ $font-family-sans-serif: montserrat, sans-serif;
 $nav-height: 82px;
 $link-blue: #3d89cd;
 
-@import "../node_modules/bootstrap/scss/bootstrap";
-@import "mixins";
-@import "single_news";
-@import "index";
-@import "projects";
-@import "form";
-@import "docs";
-@import "404";
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import 'mixins';
+@import 'single_news';
+@import 'sections';
+@import 'projects';
+@import 'form';
+@import 'docs';
+@import '404';
 
 .row {
 	margin-right: 0 !important;
@@ -52,11 +52,11 @@ $link-blue: #3d89cd;
 	border-style: solid;
 	border-color: #b9b9b9;
 	opacity: 0;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	-ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
 	filter: alpha(opacity=0);
 	position: fixed;
 	border-width: 0px 0px 1px;
-	background: #ffffff url(../images/geometric-bg-1.svg) no-repeat center center;
+	background: #ffffff url(../public/images/geometric-bg-1.svg) no-repeat center center;
 	background-size: cover;
 	// transition: all .3s linear 0s;
 	img {
@@ -85,14 +85,11 @@ $link-blue: #3d89cd;
 		}
 	}
 	&.down {
-		// @include fade-in-animation(fade-in);
 		opacity: 1;
 	}
 
 	&.top {
 		@include fade-in-animation(fade-in);
-		// opacity: 1;
-
 		position: relative !important;
 		margin-bottom: -$nav-height;
 		background: transparent;

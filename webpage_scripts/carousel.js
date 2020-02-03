@@ -1,6 +1,6 @@
-$(document).ready(function () {
+$(document).ready(function() {
 	$('.news-carousel').slick({
-		dots: true,
+		dots: false,
 		infinite: false,
 		arrows: true,
 		speed: 300,
@@ -44,14 +44,11 @@ $(document).ready(function () {
 					arrows: false,
 				},
 			},
-			// You can unslick at a given breakpoint now by adding:
-			// settings: "unslick"
-			// instead of a settings object
 		],
 	});
 
 	$('.projects-carousel').slick({
-		dots: true,
+		dots: false,
 		infinite: false,
 		arrows: true,
 		speed: 300,
@@ -95,9 +92,6 @@ $(document).ready(function () {
 					arrows: false,
 				},
 			},
-			// You can unslick at a given breakpoint now by adding:
-			// settings: "unslick"
-			// instead of a settings object
 		],
 	});
 });

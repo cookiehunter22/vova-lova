@@ -1,75 +1,56 @@
 {{!
-<default}} <!-- IMAGE 1-->
+<default}}
+<!-- IMAGE 1-->
 
-    {{#each projects}} {{#if content.full}}
-    <div class="row text-center image-overlay shadow project" id="{{{slug}}}">
-        {{!-- <div class="image-banner project" style="background: url({{{image.secure_url}}}) no-repeat center center; background-size: cover;"></div>
-        --}}
-        <img src="{{{imageBig.secure_url}}}" alt="" />
+{{#each projects}} {{#if content.full}}
+<div class="row text-center image-overlay shadow project" id="{{{slug}}}">
+    <img src="{{{imageBig.secure_url}}}" alt="" />
 
+</div>
 
-        <div class="on-screen-text"></div>
-    </div>
+<!-- PROJECT 1 -->
 
-    <!-- PROJECT 1 -->
-
-    <div class="row text-center pt-7-rem news-body">
-        <div class="col-12">
-            <h5 class="text-uppercase main-title mb-0">{{{title}}}</h5>
-            <div class="small-line mx-auto"></div>
-            <div class="w-75 mx-auto m-5">
-                {{{content.full}}}
+<div class="row text-center pt-7-rem news-body">
+    <div class="col-12">
+        <h5 class="text-uppercase main-title mb-0">{{{title}}}</h5>
+        <div class="small-line mx-auto"></div>
+        <div class="w-75 mx-auto m-5 text-justify">
+            {{{content.full}}}
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-6">
+                <i class="far fa-calendar-alt"></i>
+                <p class="date">{{{date date format='DD MMMM YYYY'}}}</p>
             </div>
-            <div class="row">
-                <div class="col-md-3 col-6">
-                    <i class="far fa-calendar-alt"></i>
-                    <p class="date">{{{date date format='DD MMMM YYYY'}}}</p>
-                </div>
+
+            <div class="col-6 col-md-3">
                 {{#if tag}}
-                <div class="col-md-3 col-6">
-                    <i class="fas fa-tag"></i>
-                    <p class="tag">{{{tag}}}</p>
-                </div>
-                {{/if}} {{#if content.author}}
-                <div class="col-md-6 col-12">
-                    <p class="author">Автор статьи: {{{content.author}}}</p>
-                </div>
+                <i class="fas fa-tag"></i>
+                <p class="tag">{{{tag}}}</p>
                 {{/if}}
             </div>
-        </div>
-    </div>
-    {{/if}} {{/each}} {{!--
-    <!-- IMAGE 2-->
-
-    <div class="row text-center image-overlay project">
-        <div class="image-banner project" id="main"></div>
-    </div>
-
-    <!-- PROJECT 2 -->
-
-    <div class="row text-center pt-7-rem news-body" id="2">
-        <div class="col-12">
-            <h5 class="text-uppercase main-title mb-0">Тайтл</h5>
-            <div class="small-line mx-auto"></div>
-            <p class="w-75 mx-auto m-5">
-                Фонд Николая Расторгуева был учреждён народным артистом России Н.В. Расторгуевым в октябре 2014 года и
-                является инициатором
-                ряда благотворительных проектов, направленных на помощь детям-воспитанникам российских детских домов.
-                Также
-                Фонд участвует в деятельности, связанной с поддержкой искусства и культуры.
-            </p>
-            <div class="row">
-                <div class="col-md-3 col-6">
-                    <i class="far fa-calendar-alt"></i>
-                    <p class="date">Июнь 16</p>
-                </div>
-                <div class="col-md-3 col-6">
-                    <i class="fas fa-tag"></i>
-                    <p class="tag">ПКНР</p>
-                </div>
-                <div class="col-md-6 col-12">
-                    <p class="author">Автор статьи: NAKWJDNLAKWND</p>
+            <div class="col-6 col-md-3"></div>
+            <div class="col-md-3">
+                <div class="row">
+                    {{#if content.author}}
+                    <div class="col-6 col-md-5 p-0 text-right"><span class="author">Автор статьи: </span></div>
+                    <div class="col-6 col-md-7 text-left"><span class="author">{{{content.author}}}</span></div>
+                    {{/if}}
+                    {{#if content.authorVideo}}
+                    <div class="col-6 col-md-5 p-0 text-right"><span class="author">Автор видео: </span></div>
+                    <div class="col-6 col-md-7 text-left"><span class="author">{{{content.authorVideo}}}</span></div>
+                    {{/if}}
+                    {{#if content.authorPhoto}}
+                    <div class="col-6 col-md-5 p-0 text-right"><span class="author">Автор фото: </span></div>
+                    <div class="col-6 col-md-7 text-left"><span class="author">{{{content.authorPhoto}}}</span></div>
+                    {{/if}}
                 </div>
             </div>
+
         </div>
-    </div> --}} {{>form}}
+    </div>
+</div>
+{{/if}} {{/each}}
+<!-- IMAGE 2-->
+
+{{>form}}

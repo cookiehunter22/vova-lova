@@ -9,24 +9,25 @@ var defaultSetter = require('./default_content/defaultSetter');
 
 // Check env vars
 
-console.log(process.env.PORT ? 'Done!' : 'Using Default');
-console.log(process.env.IP ? 'Done!' : 'Using Default');
-console.log(process.env.CLOUDINARY_URL ? 'Done!' : 'None');
+console.log(process.env.PORT ? 'Port: Done!' : 'Port: Using Default');
+console.log(process.env.IP ? 'IP: Done!' : 'IP: Using Default');
+console.log(process.env.MAILGUN_SANDBOX_URL ? 'MAILGUN_SANDBOX_URL: Done!' : 'MAILGUN_SANDBOX_URL: None');
+console.log(process.env.MAILGUN_PRIVATE_API_KEY ? 'MAILGUN_PRIVATE_API_KEY: Done!' : 'MAILGUN_PRIVATE_API_KEY: None');
 
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
 // and documentation
 
 keystone.init({
-	'name': 'FNR',
-	'brand': 'ФНР',
+	name: 'FNR',
+	brand: 'ФНР',
 	'session store': 'mongo',
-	'port': process.env.PORT || 3000,
-	'host': process.env.IP || 'localhost',
-	'sass': 'public',
-	'static': 'public',
-	'favicon': 'public/favicon.ico',
-	'views': 'templates/views',
+	port: process.env.PORT || 3000,
+	host: process.env.IP || 'localhost',
+	sass: 'public',
+	static: 'public',
+	favicon: 'public/favicon.ico',
+	views: 'templates/views',
 	'view engine': '.hbs',
 	'cloudinary config': process.env.CLOUDINARY_URL,
 	'auto update': true,
@@ -38,8 +39,8 @@ keystone.init({
 		helpers: new require('./templates/views/helpers')(),
 		extname: '.hbs',
 	}).engine,
-	'session': true,
-	'auth': true,
+	session: true,
+	auth: true,
 	'user model': 'User',
 });
 

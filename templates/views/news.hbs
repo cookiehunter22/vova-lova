@@ -1,62 +1,72 @@
 {{!
-< default}} <!-- IMAGE NEWS BANNER -->
+< default}}
+<!-- IMAGE NEWS BANNER -->
 
-    {{#with singleNews}}
-    <div class="row text-center image-overlay project" id="main">
+{{#with singleNews}}
+<div class="row text-center image-overlay project" id="main">
+    <img src="{{{imageBig.secure_url}}}" alt="" />
+</div>
 
-        {{!-- <div class="image-banner" id="main" style="	background: url({{{image.secure_url}}}) no-repeat center center; background-size: cover;
-"></div>
-        --}}
-        <img src="{{{imageBig.secure_url}}}" alt="" />
-        <div class="on-screen-text">
-            <h1 class="first-line text-uppercase">новости фонда</h1>
+<!-- NEWS BODY -->
+
+<div class="row text-center pt-7-rem news-body" id="about">
+    <div class="col-12">
+        <h5 class="text-uppercase main-title mb-0">{{{title}}}</h5>
+        <div class="small-line mx-auto"></div>
+        <div class="w-75 mx-auto m-5 text-justify">
+            {{{content.full}}}
         </div>
-    </div>
-
-    <!-- NEWS BODY -->
-
-    <div class="row text-center pt-7-rem news-body" id="about">
-        <div class="col-12">
-            <h5 class="text-uppercase main-title mb-0">{{{title}}}</h5>
-            <div class="small-line mx-auto"></div>
-            <div class="w-75 mx-auto m-5">
-                {{{content.full}}}
+        <div class="row">
+            <div class="col-md-3 col-6">
+                <i class="far fa-calendar-alt"></i>
+                <p class="date">{{{date date format='DD MMMM YYYY'}}}</p>
             </div>
-            <div class="row">
-                <div class="col-md-3 col-6">
-                    <i class="far fa-calendar-alt"></i>
-                    <p class="date">{{{date date format='DD MMMM YYYY'}}}</p>
-                </div>
 
+            <div class="col-6 col-md-3">
                 {{#if tag}}
-                <div class="col-md-3 col-6">
-                    <i class="fas fa-tag"></i>
-                    <p class="tag">{{{tag}}}</p>
-                </div>
-                {{/if}} {{#if content.author}}
-                <div class="col-md-3 offset-md-3 col-12">
-                    <p class="author">Автор статьи: {{{content.author}}}</p>
-                </div>
+                <i class="fas fa-tag"></i>
+                <p class="tag">{{{tag}}}</p>
                 {{/if}}
-
             </div>
+            <div class="col-6 col-md-3"></div>
+            <div class="col-md-3">
+                <div class="row">
+                    {{#if content.author}}
+                    <div class="col-6 col-md-5 p-0 text-right"><span class="author">Автор статьи: </span></div>
+                    <div class="col-6 col-md-7 text-left"><span class="author">{{{content.author}}}</span></div>
+                    {{/if}}
+                    {{#if content.authorVideo}}
+                    <div class="col-6 col-md-5 p-0 text-right"><span class="author">Автор видео: </span></div>
+                    <div class="col-6 col-md-7 text-left"><span class="author">{{{content.authorVideo}}}</span></div>
+                    {{/if}}
+                    {{#if content.authorPhoto}}
+                    <div class="col-6 col-md-5 p-0 text-right"><span class="author">Автор фото: </span></div>
+                    <div class="col-6 col-md-7 text-left"><span class="author">{{{content.authorPhoto}}}</span></div>
+                    {{/if}}
+                </div>
+            </div>
+
         </div>
     </div>
+</div>
 
-    {{#if video.youtubeId}}
-    <div class="row text-center video" id="news-video">
-        <div class="col-12 pr-0 pl-0">
+{{#if video.youtubeId}}
+<div class="row text-center video" id="news-video">
+    <div class="col-12 pr-0 pl-0">
 
-            <div class="iframe" style="position:relative;height:0;padding-bottom:56.29%"><iframe src="https://www.youtube.com/embed/{{video.youtubeId}}?ecver=2&playlist={{video.youtubeId}}&autoplay=0&controls=0&disablekb=1&fs=0&loop=0&modestbranding=1&rel=0&showinfo=0&mute=0"
-                    style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0"
-                    allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+        <div class="iframe" style="position:relative;height:0;padding-bottom:56.29%"><iframe
+                src="https://www.youtube.com/embed/{{video.youtubeId}}?ecver=2&playlist={{video.youtubeId}}&autoplay=0&controls=0&disablekb=1&fs=0&loop=0&modestbranding=1&rel=0&showinfo=0&mute=0"
+                style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-        </div>
     </div>
-    {{/if}}
+</div>
+{{/if}}
 
-    {{/with}}
+{{/with}}
 
-    {{> news_carousel}}
+{{> gallery}}
 
-    {{>form}}
+{{> news_carousel}}
+
+{{>form}}
