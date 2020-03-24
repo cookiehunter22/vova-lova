@@ -70,6 +70,7 @@ keystone.set('nav', {
 
 	Проекты: 'projects',
 	Руководство: 'managers',
+	'Попечительский совет': 'BoardMembers',
 	Новости: 'news',
 	Документы: 'documents',
 });

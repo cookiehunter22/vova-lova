@@ -1,7 +1,7 @@
 var keystone = require('keystone');
 const { fetchAsync } = require('../../utils/db_utils');
 
-exports = module.exports = function (req, res) {
+exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 
 	// view.query('news', keystone.list('News').model.find({ state: 'published' }));
@@ -10,7 +10,7 @@ exports = module.exports = function (req, res) {
 	// view.render('index');
 	var locals = res.locals;
 
-	view.on('init', async function (next) {
+	view.on('init', async function(next) {
 		var q1 = keystone.list('Pages').model.find();
 		var q2 = keystone
 			.list('Projects')
@@ -27,20 +27,20 @@ exports = module.exports = function (req, res) {
 			.model.find({ state: 'published' })
 			.sort({ sortOrder: 1 });
 
+		const q6 = keystone
+			.list('BoardMembers')
+			.model.find({ state: 'published' })
+			.sort({ sortOrder: 1 });
+
 		locals.content = {};
 
-		let [
-			pages,
-			projectSlides,
-			managers,
-			newsSlides,
-			partners,
-		] = await Promise.all([
+		let [pages, projectSlides, managers, newsSlides, partners, boardMembers] = await Promise.all([
 			fetchAsync(q1),
 			fetchAsync(q2),
 			fetchAsync(q3),
 			fetchAsync(q4),
 			fetchAsync(q5),
+			fetchAsync(q6),
 		]);
 
 		for (let i = 0; i < pages.length; i++) {
@@ -50,6 +50,7 @@ exports = module.exports = function (req, res) {
 		locals.partners = partners;
 		locals.projectSlides = projectSlides;
 		locals.managers = managers;
+		locals.boardMembers = boardMembers;
 		locals.newsSlides = newsSlides;
 
 		next();

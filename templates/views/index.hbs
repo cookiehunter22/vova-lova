@@ -149,6 +149,37 @@
 </div>
 {{/if}}
 
+<!-- Board Members -->
+{{#if content.board}}
+{{#if boardMembers.length}}
+
+<div class="row text-center pt-7-rem management">
+	<div class="col-12">
+		<h5 class="text-uppercase main-title mb-5">{{{content.board.title}}}</h5>
+		<p class="w-75 mx-auto">
+			{{{content.board.text}}}
+		</p>
+
+		{{#if boardMembers}}
+
+		<div class="row mt-5">
+			{{#each boardMembers}}
+			<div class="col-12 col-md-4">
+				<div class="management_card mx-auto">
+					<img src="{{{image.secure_url}}}" alt="" class="mb-5">
+					<h6 class="text-uppercase main-title">{{{name}}}</h6>
+					<p class="text-uppercase">{{{position}}}</p>
+				</div>
+			</div>
+			{{/each}}
+
+		</div>
+		{{/if}}
+	</div>
+</div>
+{{/if}}
+{{/if}}
+
 <!-- NOVOSTI -->
 
 {{> news_carousel}}

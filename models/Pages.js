@@ -120,6 +120,18 @@ Pages.add({
 		},
 	},
 
+	// board
+	board: {
+		title: { type: String, dependsOn: { name: 'board' } },
+		text: {
+			type: Types.Html,
+			wysiwyg: true,
+			height: 400,
+			collapse: true,
+			dependsOn: { name: ['board'] },
+		},
+	},
+
 	// НОВОСТИ
 	news: {
 		title: { type: String, dependsOn: { name: 'news' } },
